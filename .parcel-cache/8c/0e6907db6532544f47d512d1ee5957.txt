@@ -1,0 +1,21 @@
+20
+63C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\index.html132573545852155201 0
+67C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\.gitattributes132573372394816304 0
+79C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\predefinied.css.map132573493083147215 0
+75C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\predefinied.css132573493083147215 0
+59C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\app.js132573373335288799 0
+58C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts132573490418562187 1
+69C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\style.css132573493491619993 0
+59C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles132573373241412301 1
+76C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\predefinied.scss132573493080777261 0
+73C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\style.css.map132573493491619993 0
+70C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\styles\style.scss132573493491290006 0
+82C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Bold BG.otf131132756460000000 0
+82C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Bold RU.otf131132756460000000 0
+85C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Regular BG.otf131132756460000000 0
+79C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Bold.otf131132756460000000 0
+83C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Light BG.otf131132756460000000 0
+83C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Light RU.otf131132756460000000 0
+80C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Light.otf131132756460000000 0
+85C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Regular RU.otf131132756460000000 0
+82C:\Users\voide\OneDrive\Documents\GitHub\polishTruth\fonts\Kelson Sans Regular.otf131132756460000000 0

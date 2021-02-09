@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@font-face {
+  font-family: 'KelsonSans';
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Kelson Sans Bold.otf");
+}
+
+@font-face {
+  font-family: 'KelsonSans';
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Kelson Sans Regular.otf");
+}
+
+::-moz-selection {
+  background: #2384ba;
+  color: white;
+}
+
+::selection {
+  background: #2384ba;
+  color: white;
+}
+
+.container-fluid {
+  max-width: 1440px;
+}
+
+.color-dark {
+  color: #231f20;
+}
+
+.color-blue {
+  color: #2384ba;
+}
+
+.color-orange {
+  color: #f47826;
+}
+
+.background-dark {
+  background: #231f20;
+}
+
+.color-dark-gradient {
+  background: #231f20;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.margin-100-top {
+  margin-top: 6.5rem;
+}
+
+a:focus, a:active {
+  text-decoration: none;
+}
+
+.btn.focus,
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.btn-link:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-success {
+  background-color: #f47826;
+  border-color: #f47826;
+}
+
+.btn-success.active, .btn-success.focus, .btn-success.hover, .btn-success:hover, .btn-success:focus, .btn-success:active {
+  background-color: #f47826;
+  border-color: #f47826;
+}
+
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #f4782688;
+          box-shadow: 0 0 0 0.2rem #f4782688;
+}
+
+.btn-info {
+  background-color: #2384ba;
+  border-color: #2384ba;
+}
+
+.btn-info.active, .btn-info.focus, .btn-info.hover, .btn-info:hover, .btn-info:focus, .btn-info:active {
+  background-color: #2384ba;
+  border-color: #2384ba;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #2385ba7c;
+          box-shadow: 0 0 0 0.2rem #2385ba7c;
+}
+
+.page-link {
+  color: #2384ba;
+}
+
+.page-item.active .page-link {
+  background-color: #2384ba;
+  border-color: #2384ba;
+}
+
+.columns-2 {
+  -webkit-columns: 2;
+          columns: 2;
+}
+
+table a {
+  color: #2384ba;
+}
+
+table a:hover {
+  color: #2384ba;
+}
+
+@media (max-width: 992px) {
+  .columns-2 {
+    -webkit-columns: 1;
+            columns: 1;
+  }
+}
+/*# sourceMappingURL=predefinied.css.map */
