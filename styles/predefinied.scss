@@ -39,6 +39,7 @@ $fontSizeBodyL: 1.25rem;
 $fontSizeBodyM: 1.125rem;
 $fontSizeBodyS: 1rem;
 $fontSizeBodyXS: 0.8rem;
+$fontSizeBodyXSS: 0.625rem;
 $fontSizeSmallest: 0.5rem;
 $spaceLetters:0.45px;
 
@@ -99,56 +100,33 @@ a {
     }
 }
 
-.btn.focus,
-.btn:focus {
-    box-shadow: none;
-}
+.main .btn {
+    width: 113px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    background: $ptRed;
+    color: white;
+    border-radius: 0;
+    position: relative;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    transition: $durationM;
 
-.btn.btn-link:focus {
-    box-shadow: none;
-}
-
-.btn-success {
-    background-color: $kongresOrange;
-    border-color: $kongresOrange;
-
-    &.active,
-    &.focus,
-    &.hover,
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: $kongresOrange;
-        border-color: $kongresOrange;
+    &::after {
+        height: 3px;
+        width: 33px;
+        background: white;
+        content: '';
+        margin-left: 0.5rem;
     }
 
-    &:not(:disabled):not(.disabled).active:focus,
-    &:not(:disabled):not(.disabled):active:focus,
-    .show>&.dropdown-toggle:focus {
-        box-shadow: 0 0 0 0.2rem #f4782688;
-    }
-}
-
-.btn-info {
-    background-color: $kongresLightBlue;
-    border-color: $kongresLightBlue;
-
-    &.active,
-    &.focus,
-    &.hover,
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: $kongresLightBlue;
-        border-color: $kongresLightBlue;
-
+    &:hover {
+        color: white;
+        transform: scale(1.1);
     }
 
-    &:not(:disabled):not(.disabled).active:focus,
-    &:not(:disabled):not(.disabled):active:focus,
-    .show>&.dropdown-toggle:focus {
-        box-shadow: 0 0 0 0.2rem #2385ba7c;
-    }
 }
 
 .page-link {

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Polish Truth by Edward Reid</title>
+    <meta name="description" content="Edward Reid - The Polish truth about the World War II history and not the fantastical story that is being used in a narrative to defame and destroy Poland.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bacb26a93c4c688210f076cd9d6e66ba">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header id="header" class="header navbar">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="#" class="header__logo-container" aria-label="logo">
+
+                <!-- <div class="welcome__logo-bar-helper"></div> -->
+                <svg class="header__logo" width="29.318mm" height="11.15mm" version="1.1" viewbox="0 0 29.318 11.15" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%" gradienttransform="rotate(145)">
+                            <stop offset="0%" style="stop-color: #A1B9CE;stop-opacity:1"></stop>
+                            <stop offset="100%" style="stop-color: #C0DCF5;stop-opacity:1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(-9.4931 -17.064)">
+                        <path class="" d="m9.4953 26.156h18.12v2.052h-18.12z" stroke-width="1.1058" style="paint-order:normal" fill="url(#logoGradient)"></path>
+                        <g class="header__logo-arkne" transform="matrix(.26458 0 0 .26458 1.5314 -.67968)" aria-label="arkne">
+                            <path d="m53.612 96.662v-22.16h-4.16v3.12h-0.08c-1.6-2.44-4.44-3.72-7.52-3.72-7.96 0-11.76 6.36-11.76 11.76 0 5.84 4.28 11.56 11.76 11.56 3 0 5.92-1.28 7.52-4h0.08v3.44zm-4.08-11.04c0 4.24-3.36 7.8-7.72 7.8-4.4 0-7.56-3.8-7.56-7.8 0-3.48 2.48-7.92 7.6-7.92 4.28 0 7.68 3.2 7.68 7.92z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m63.147 96.662v-12.12c0-3.16 1.12-4.84 2.44-5.56 1-0.52 2.36-0.8 3-0.8v-4.28c-1.04 0.04-3.88 0.12-5.64 2.6h-0.08v-2h-3.88v22.16z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m85.1 74.502-7.88 10.68h-0.08v-18.12h-4.16v29.6h4.16v-11.48h0.08l8.88 11.48h5.2l-9.32-11.72 8.04-10.44z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m114.1 96.662v-13.12c-0.04-2.48-0.52-4.24-1.4-5.68-1.6-2.48-4.4-3.96-7.84-3.96-0.88 0-4.24 0-6.48 2.96h-0.08v-2.36h-3.88v22.16h4.16v-12.08c0-4.44 2.36-6.88 5.84-6.88 5.52 0 5.52 5.2 5.52 6.92v12.04z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m140.78 87.382c0.04-0.28 0.12-1.4 0.12-2.12-0.04-6.48-5.28-11.36-11.28-11.36-6.24 0-11.36 5-11.36 11.64 0 6.28 5 11.68 11.28 11.68 3.44 0 8.52-1.8 10.64-7.52h-4.16c-1 1.92-3.24 3.72-6.32 3.72-2.8 0-6.24-1.76-7.28-6.04zm-18.36-3.2c0.2-3.24 3.16-6.48 7.16-6.48s6.96 3.24 7.16 6.48z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                        </g>
+                        <g class="header__logo-group" transform="matrix(1.5184 0 0 1.5184 -20.064 -12.644)" stroke-width=".2225" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="GROUP">
+                            <path d="m33.523 25.897c-0.12816-0.23674-0.36668-0.356-0.59097-0.356-0.37914 0-0.67285 0.30794-0.67285 0.68709 0 0.36846 0.29014 0.67997 0.67463 0.67997 0.3204 0 0.67285-0.23852 0.67997-0.67997h-0.83305v0.17622h0.61411c-0.12638 0.32396-0.41652 0.32752-0.4539 0.32752-0.2492 0-0.4895-0.2136-0.4895-0.50374 0-0.2759 0.2136-0.51087 0.48772-0.51087 0.19402 0 0.30438 0.11926 0.35956 0.17978z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m34.764 26.883-0.36846-0.49129c0.08544 0 0.37736-0.05518 0.37736-0.40406 0-0.11036-0.03738-0.2314-0.12104-0.3115-0.06942-0.06586-0.16554-0.11036-0.35066-0.11036h-0.40762v1.3172h0.19224v-0.61055h0.0036l0.43432 0.61055zm-0.67819-1.141h0.20292c0.21716 0 0.29192 0.13528 0.29192 0.24564 0 0.25454-0.2848 0.2581-0.36312 0.2581h-0.13172z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m36.381 26.228c0-0.37558-0.2937-0.68709-0.68531-0.68709-0.40228 0-0.68531 0.32574-0.68531 0.68353 0 0.36134 0.29192 0.68353 0.68531 0.68353 0.3916 0 0.68531-0.3204 0.68531-0.67997zm-0.19224 0.0018c0 0.20648-0.15308 0.50196-0.49307 0.50196-0.3382 0-0.49306-0.29192-0.49306-0.50731 0-0.21004 0.15308-0.5073 0.49306-0.5073 0.32752 0 0.49307 0.27946 0.49307 0.51265z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m37.569 25.566h-0.19224v0.88645c0 0.24386-0.178 0.27946-0.2492 0.27946s-0.2492-0.0356-0.2492-0.27946v-0.88645h-0.19224v0.89179c0 0.14952 0.04984 0.2581 0.1335 0.3382 0.08188 0.06764 0.1869 0.11214 0.30794 0.11214s0.22606-0.0445 0.30794-0.11214c0.08366-0.0801 0.1335-0.18868 0.1335-0.3382z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                            <path d="m38.117 26.363h0.18868c0.31506 0 0.46458-0.16376 0.46458-0.39872s-0.14952-0.39872-0.46458-0.39872h-0.38092v1.3172h0.19224zm0-0.62123h0.18868c0.21894 0 0.27234 0.1246 0.27234 0.2225s-0.0534 0.2225-0.27234 0.2225h-0.18868z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"></path>
+                        </g>
+                    </g>
+                </svg>
+
+
+
+
+            </a>
+            <button aria-expanded="false" aria-label="Menu" class="button nav-toggle button--icon-only">
+                <span class="button__text">
+                    <div class="nav-toggle__inner">
+                        <svg aria-hidden="true" height="24" viewbox="0 0 24 24" width="24" class="icon nav-toggle__icon nav-toggle__icon--menu">
+                            <path fill="#000" d="M22 6H2V4h20v2zM2 13h16v-2H2v2zm0 7h20v-2H2v2z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="24" viewbox="0 0 24 24" width="24" class="icon nav-toggle__icon nav-toggle__icon--close">
+                            <path fill="#000" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                            </path>
+                        </svg>
+                    </div>
+                </span>
+            </button>
+
+            <nav class="header__nav">
+                <ol id="navList" class="header__nav-left d-lg-flex justify-content-center m-0 p-0">
+                    <li class="header__nav-li active"> <a class="header__nav-link hoverPlus" href="#">Sservices</a>
+                    </li>
+                    <li class="header__nav-li"> <a class="header__nav-link hoverPlus" href="#">Our
+                            Work</a></li>
+                    <li class="header__nav-li"> <a class="header__nav-link hoverPlus" href="#">Testismonials</a>
+                    </li>
+                    <li class="header__nav-li"> <a class="header__nav-link hoverPlus" href="#">Contact</a></li>
+                    <li class="header__nav-li"> <a class="header__nav-link hoverPlus" href="#">Blog</a></li>
+                </ol>
+
+                <div class="header__nav-right d-flex justify-content-around justify-content-lg-end mt-4 mt-lg-0">
+                    <a class="header__social-link  mx-2 hoverPlus" href="#" aria-label="facebook">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16" viewbox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+
+                            <path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+                                            c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+                                            v20.341H37.29v27.585h23.814v70.761H89.584z"></path>
+                        </svg>
+                    </a>
+
+                    <a class="header__social-link  mx-2 hoverPlus" href="#" aria-label="instagram">
+                        <svg height="21px" viewbox="0 0 511 511.9" width="21px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path>
+                            <path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path>
+                            <path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path>
+                        </svg>
+                    </a>
+
+                    <a class="header__social-link  mx-2 hoverPlus" href="#" aria-label="twitter">
+                        <svg enable-background="new 0 0 24 24" height="21px" viewbox="0 0 24 24" width="21px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"></path>
+                            <path d="m.396 7.977h4.976v16.023h-4.976z"></path>
+                            <path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"></path>
+                        </svg>
+                    </a>
+
+
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <script src="5192fd22298762fb54dec0be92eea264" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="3513bce8bc35b0205f820876a65f4faa"></script>
+</body>
+
+</html>
