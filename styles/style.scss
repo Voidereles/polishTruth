@@ -292,6 +292,7 @@ body {
             flex-direction: column;
             justify-content: center;
             cursor: initial;
+            opacity: 0;
 
             &:hover {
                 transform: none;
@@ -478,9 +479,9 @@ body {
 }
 
 .fadeOut {
-    animation: 0.3s fadeOut;
+    animation: 0.5s fadeOut 4.5s;
 }
 
 .fadeIn {
-    animation: 0.3s fadeIn;
+    animation: 0.5s fadeOut 4.5s, 0.3s fadeIn forwards;
 }

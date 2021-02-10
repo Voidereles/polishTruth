@@ -665,6 +665,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: initial;
+  opacity: 0;
 }
 
 .hero__big-container .hero__item:hover {
@@ -887,13 +888,13 @@ body {
 }
 
 .fadeOut {
-  -webkit-animation: 0.3s fadeOut;
-          animation: 0.3s fadeOut;
+  -webkit-animation: 0.5s fadeOut 4.5s;
+          animation: 0.5s fadeOut 4.5s;
 }
 
 .fadeIn {
-  -webkit-animation: 0.3s fadeIn;
-          animation: 0.3s fadeIn;
+  -webkit-animation: 0.5s fadeOut 4.5s, 0.3s fadeIn forwards;
+          animation: 0.5s fadeOut 4.5s, 0.3s fadeIn forwards;
 }
 
 

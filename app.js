@@ -72,22 +72,6 @@ $(function () {
 });
 
 
-document.querySelectorAll('.owl-item').forEach(element => {
-    element.onclick = function () {
-        console.log('dupa');
-        let centerCopy = element.innerHTML;
-        document.querySelector('.hero__big-container').innerHTML = centerCopy;
-        document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
-
-        // to.owl.carousel
-    }
-    // let centerCopy = element.innerHTML;
-    // document.querySelector('.hero__big-container').innerHTML = centerCopy;
-    // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
-
-});
-
-
 function centerGoMid(event) {
     document.querySelectorAll('.owl-item').forEach(element => {
         if (element.classList.contains('center')) {
@@ -104,6 +88,7 @@ function addFadeOut() {
         element.classList.add('fadeOut');
         // }
     });
+    addFadeIn();
 }
 
 function addFadeIn() {
@@ -113,6 +98,7 @@ function addFadeIn() {
         // }
     });
 }
+
 
 $('.hero__carousel').owlCarousel({
     loop: true,
@@ -132,3 +118,20 @@ $('.hero__carousel').owlCarousel({
     dots: false,
 
 })
+
+
+
+document.querySelectorAll('.owl-item').forEach(element => {
+    element.onclick = function () {
+        console.log('dupa');
+        let centerCopy = element.innerHTML;
+        document.querySelector('.hero__big-container').innerHTML = centerCopy;
+        document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
+        $('.hero-carousel').trigger('refresh.owl.carousel');
+        // to.owl.carousel
+    }
+    // let centerCopy = element.innerHTML;
+    // document.querySelector('.hero__big-container').innerHTML = centerCopy;
+    // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
+
+});
