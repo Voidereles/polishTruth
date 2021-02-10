@@ -1,157 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+ @font-face {
+     font-family: 'Anton';
+     font-weight: 400;
+     font-display: swap;
+     src: url('../fonts/Anton-Regular.ttf');
+ }
 
-@font-face {
-    font-family: 'Kelson-Sans';
-    font-weight: 700;
-    font-display: swap;
-    src: url('../fonts/Kelson\ Sans\ Bold.otf');
-}
+ @font-face {
+     font-family: 'Kelson-Sans';
+     font-weight: 700;
+     font-display: swap;
+     src: url('../fonts/Kelson\ Sans\ Bold.otf');
+ }
 
-@font-face {
-    font-family: 'Kelson-Sans';
-    font-weight: 400;
-    font-display: swap;
-    src: url('../fonts/Kelson\ Sans\ Regular.otf');
-}
+ @font-face {
+     font-family: 'Kelson-Sans';
+     font-weight: 400;
+     font-display: swap;
+     src: url('../fonts/Kelson\ Sans\ Regular.otf');
+ }
 
-$ptGrey:#747474;
-$ptRed:#e20a0a;
-$ptRed50:rgba(226, 10, 10, 0.5);
-$black88:rgba(0, 0, 0, .88);
-$black62:rgba(0, 0, 0, .62);
-$ptDarkGrey:#303030;
-$ptBlackWhite:linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
+ $ptGrey:#747474;
+ $ptRed:#e20a0a;
+ $ptRed50:rgba(226, 10, 10, 0.5);
+ $black88:rgba(0, 0, 0, .88);
+ $black62:rgba(0, 0, 0, .62);
+ $ptDarkGrey:#303030;
+ $ptBlackWhite:linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
 
-$backgroundGrey:#f2f1e6;
+ $backgroundGrey:#f2f1e6;
 
-$kongresDark: #231f20;
-$kongresOrange: #f47826;
-$kongresLightBlue: #2384ba;
-$kongresBlueForGradient: #37a0cd;
-$kongresDarkGrey:#58595B;
-$kongresGradient: linear-gradient(45deg, rgba(35, 132, 186, 1) 0%, rgba(55, 160, 205, 1) 100%);
+ $kongresDark: #231f20;
+ $kongresOrange: #f47826;
+ $kongresLightBlue: #2384ba;
+ $kongresBlueForGradient: #37a0cd;
+ $kongresDarkGrey:#58595B;
+ $kongresGradient: linear-gradient(45deg, rgba(35, 132, 186, 1) 0%, rgba(55, 160, 205, 1) 100%);
 
 
-$fontSizeH1:3.85rem;
-$fontSizeH2: 2rem;
-$fontSizeH3: 1.625rem;
-$fontSizeBodyL: 1.25rem;
-$fontSizeBodyM: 1.125rem;
-$fontSizeBodyS: 1rem;
-$fontSizeBodyXS: 0.8rem;
-$fontSizeBodyXSS: 0.625rem;
-$fontSizeSmallest: 0.5rem;
-$spaceLetters:0.45px;
+ $fontSizeH1:3.85rem;
+ $fontSizeH2: 2rem;
+ $fontSizeH3: 1.625rem;
+ $fontSizeBodyL: 1.25rem;
+ $fontSizeBodyM: 1.125rem;
+ $fontSizeBodyS: 1rem;
+ $fontSizeBodyXS: 0.8rem;
+ $fontSizeBodyXSS: 0.625rem;
+ $fontSizeSmallest: 0.5rem;
+ $spaceLetters:0.45px;
 
-$bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
-$cubicBezier:cubic-bezier(.91, .11, .19, .92);
-$durationXS: 200ms;
-$durationS: 300ms;
-$durationM: 400ms;
-$durationL: 600ms;
-$durationXL: 800ms;
+ $bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
+ $cubicBezier:cubic-bezier(.91, .11, .19, .92);
+ $durationXS: 200ms;
+ $durationS: 300ms;
+ $durationM: 400ms;
+ $durationL: 600ms;
+ $durationXL: 800ms;
 
-// .container-fluid {
-//     max-width: 1700px;
-// }
+ // .container-fluid {
+ //     max-width: 1700px;
+ // }
 
-::selection {
-    background: $kongresLightBlue;
-    color: white;
-}
+ ::selection {
+     background: $kongresLightBlue;
+     color: white;
+ }
 
-.container-fluid {
-    max-width: 1440px;
-}
+ .container-fluid {
+     max-width: 1440px;
+ }
 
-.color-dark {
-    color: $kongresDark;
-}
+ .color-dark {
+     color: $kongresDark;
+ }
 
-.color-blue {
-    color: $kongresLightBlue;
-}
+ .color-blue {
+     color: $kongresLightBlue;
+ }
 
-.color-orange {
-    color: $kongresOrange;
-}
+ .color-orange {
+     color: $kongresOrange;
+ }
 
-.background-dark {
-    background: $kongresDark;
-}
+ .background-dark {
+     background: $kongresDark;
+ }
 
-.color-dark-gradient {
-    background: $kongresDark;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-}
+ .color-dark-gradient {
+     background: $kongresDark;
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-shadow: none;
+ }
 
-.margin-100-top {
-    margin-top: 6.5rem;
-}
+ .margin-100-top {
+     margin-top: 6.5rem;
+ }
 
-a {
+ a {
 
-    &:focus,
-    &:active {
-        text-decoration: none;
-    }
-}
+     &:focus,
+     &:active {
+         text-decoration: none;
+     }
+ }
 
-.main .btn {
-    width: 113px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    background: $ptRed;
-    color: white;
-    border-radius: 0;
-    position: relative;
-    font-family: 'Anton', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.45px;
-    transition: $durationM;
+ .main .btn {
+     width: 113px;
+     height: 44px;
+     display: flex;
+     align-items: center;
+     background: $ptRed;
+     color: white;
+     border-radius: 0;
+     position: relative;
+     font-family: 'Anton', sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 0.45px;
+     transition: $durationM;
 
-    &::after {
-        height: 3px;
-        width: 33px;
-        background: white;
-        content: '';
-        margin-left: 0.5rem;
-    }
+     &::after {
+         height: 3px;
+         width: 33px;
+         background: white;
+         content: '';
+         margin-left: 0.5rem;
+     }
 
-    &:hover {
-        color: white;
-        transform: scale(1.1);
-    }
+     &:hover {
+         color: white;
+         transform: scale(1.1);
+     }
 
-}
+ }
 
-.page-link {
-    color: $kongresLightBlue;
-}
+ .page-link {
+     color: $kongresLightBlue;
+ }
 
-.page-item.active .page-link {
-    background-color: $kongresLightBlue;
-    border-color: $kongresLightBlue;
-}
+ .page-item.active .page-link {
+     background-color: $kongresLightBlue;
+     border-color: $kongresLightBlue;
+ }
 
-.columns-2 {
-    columns: 2;
-}
+ .columns-2 {
+     columns: 2;
+ }
 
-table a {
-    color: $kongresLightBlue;
+ table a {
+     color: $kongresLightBlue;
 
-    &:hover {
-        color: $kongresLightBlue;
-    }
-}
+     &:hover {
+         color: $kongresLightBlue;
+     }
+ }
 
-@media (max-width:992px) {
-    .columns-2 {
-        columns: 1;
-    }
-}
+ @media (max-width:992px) {
+     .columns-2 {
+         columns: 1;
+     }
+ }

@@ -192,7 +192,13 @@
   height: 100%;
   width: 100%; }
 
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@font-face {
+  font-family: 'Anton';
+  font-weight: 400;
+  font-display: swap;
+  src: url("Anton-Regular.c0fbbe8f.ttf");
+}
+
 @font-face {
   font-family: 'Kelson-Sans';
   font-weight: 700;
