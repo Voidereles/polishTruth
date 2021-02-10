@@ -21788,7 +21788,7 @@ function headerOnScroll() {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (window.pageYOffset > 36) {
+    if (window.pageYOffset > 100) {
       $('.header ').addClass('scrolled');
 
       if (prevScrollpos > currentScrollPos) {
@@ -21847,8 +21847,7 @@ function centerGoMid(event) {
       document.querySelector('.hero__big-container').innerHTML = centerCopy;
       document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
     }
-  });
-  console.log(event);
+  }); // console.log(event.item.index);
 }
 
 function addFadeOut() {
@@ -21880,16 +21879,20 @@ $('.hero__carousel').owlCarousel({
   onTranslated: centerGoMid,
   onChanged: addFadeOut,
   // onChange: addFadeIn,
-  // autoplayHoverPause: true,
+  autoplayHoverPause: true,
   dots: false
 });
 document.querySelectorAll('.owl-item').forEach(function (element) {
   element.onclick = function () {
-    console.log('dupa');
-    var centerCopy = element.innerHTML;
-    document.querySelector('.hero__big-container').innerHTML = centerCopy;
-    document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
-    $('.hero-carousel').trigger('refresh.owl.carousel'); // to.owl.carousel
+    // console.log('dupa');
+    // let centerCopy = element.innerHTML;
+    // console.log(element.firstElementChild.getAttribute('data-owl-target'));
+    var owlPosition = element.firstElementChild.getAttribute('data-owl-target') + 3;
+    $('.hero__carousel').trigger("to.owl.carousel", [owlPosition, 50]); // $('.hero-carousel').trigger('refresh.owl.carousel');
+    // document.querySelector('.hero__big-container').innerHTML = centerCopy;
+    // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
+    // $('.hero-carousel').trigger('refresh.owl.carousel');
+    // to.owl.carousel
   }; // let centerCopy = element.innerHTML;
   // document.querySelector('.hero__big-container').innerHTML = centerCopy;
   // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
@@ -21923,7 +21926,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59685" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61667" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

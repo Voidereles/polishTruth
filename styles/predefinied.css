@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @font-face {
-  font-family: 'KelsonSans';
+  font-family: 'Kelson-Sans';
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/Kelson Sans Bold.otf");
 }
 
 @font-face {
-  font-family: 'KelsonSans';
+  font-family: 'Kelson-Sans';
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/Kelson Sans Regular.otf");

@@ -10,7 +10,7 @@ function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
-        if (window.pageYOffset > 36) {
+        if (window.pageYOffset > 100) {
             $('.header ').addClass('scrolled');
 
             if (prevScrollpos > currentScrollPos) {
@@ -80,7 +80,7 @@ function centerGoMid(event) {
             document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
         }
     });
-    console.log(event.item.index);
+    // console.log(event.item.index);
 }
 
 function addFadeOut() {
