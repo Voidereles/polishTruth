@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     magicLine.classList.add('magic-line');
     mainNav.append(magicLine);
     let activeElement = document.querySelector('#navList .active');
-    // const logo = document.querySelector(".header__logo-img");
 
     const activeElLine = () => {
         let activeWidth = parseFloat(getComputedStyle(activeElement, null).width.replace("px", ""));
@@ -13,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
         magicLine.style.opacity = 1;
     }
 
-    // if (document.querySelector('#navList li').classList.contains('active')) {
-    //     logo.addEventListener('load', (event) => {
-    //         activeElLine();
-    //     });
-    // }
+    if (document.querySelector('#navList li').classList.contains('active')) {
+        document.querySelector('.hero__carousel').addEventListener('load', (event) => {
+            activeElLine();
+        });
+    }
 
     const navItems = document.querySelectorAll('.header__nav-li');
 
