@@ -659,6 +659,8 @@ body {
 }
 
 .hero__big-container .hero__item {
+  -webkit-animation: 1s fadeOut 4s forwards, 0.8s fadeIn forwards;
+          animation: 1s fadeOut 4s forwards, 0.8s fadeIn forwards;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,16 +893,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-.fadeOut {
-  -webkit-animation: 0.7s fadeOut 4s;
-          animation: 0.7s fadeOut 4s;
-}
-
-.fadeIn {
-  -webkit-animation: 0.7s fadeOut 4s, 0.3s fadeIn forwards;
-          animation: 0.7s fadeOut 4s, 0.3s fadeIn forwards;
 }
 
 

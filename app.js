@@ -77,7 +77,7 @@ function centerGoMid(event) {
         if (element.classList.contains('center')) {
             let centerCopy = element.innerHTML;
             document.querySelector('.hero__big-container').innerHTML = centerCopy;
-            document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
+            // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
         }
     });
     // console.log(event.item.index);
@@ -86,16 +86,16 @@ function centerGoMid(event) {
 function addFadeOut() {
     document.querySelectorAll('.hero__big-container .hero__item').forEach(element => {
         // if (element.classList.contains('center')) {
-        element.classList.add('fadeOut');
+        // element.classList.add('fadeOut');
         // }
     });
-    addFadeIn();
+    // addFadeIn();
 }
 
 function addFadeIn() {
     document.querySelectorAll('.hero__big-container .hero__item').forEach(element => {
         // if (element.classList.contains('center')) {
-        element.classList.add('fadeIn');
+        // element.classList.add('fadeIn');
         // }
     });
 }

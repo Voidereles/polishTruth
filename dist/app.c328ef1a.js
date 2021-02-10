@@ -21844,24 +21844,22 @@ function centerGoMid(event) {
   document.querySelectorAll('.owl-item').forEach(function (element) {
     if (element.classList.contains('center')) {
       var centerCopy = element.innerHTML;
-      document.querySelector('.hero__big-container').innerHTML = centerCopy;
-      document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
+      document.querySelector('.hero__big-container').innerHTML = centerCopy; // document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
     }
   }); // console.log(event.item.index);
 }
 
 function addFadeOut() {
-  document.querySelectorAll('.hero__big-container .hero__item').forEach(function (element) {
-    // if (element.classList.contains('center')) {
-    element.classList.add('fadeOut'); // }
-  });
-  addFadeIn();
+  document.querySelectorAll('.hero__big-container .hero__item').forEach(function (element) {// if (element.classList.contains('center')) {
+    // element.classList.add('fadeOut');
+    // }
+  }); // addFadeIn();
 }
 
 function addFadeIn() {
-  document.querySelectorAll('.hero__big-container .hero__item').forEach(function (element) {
-    // if (element.classList.contains('center')) {
-    element.classList.add('fadeIn'); // }
+  document.querySelectorAll('.hero__big-container .hero__item').forEach(function (element) {// if (element.classList.contains('center')) {
+    // element.classList.add('fadeIn');
+    // }
   });
 }
 
@@ -21926,7 +21924,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61737" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62823" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
