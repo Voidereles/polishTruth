@@ -21848,6 +21848,7 @@ function centerGoMid(event) {
       document.querySelector('.hero__big-container .hero__item').classList.add('fadeIn');
     }
   });
+  console.log(event);
 }
 
 function addFadeOut() {
