@@ -1,6 +1,6 @@
-// import 'bootstrap';
-// import 'owl.carousel';
-// import './scripts/magicLine.js';
+import 'bootstrap';
+import 'owl.carousel';
+import './scripts/magicLine.js';
 
 // if (module.hot) {
 //     module.hot.accept()
@@ -140,4 +140,42 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
             }
         });
     }
+}
+
+
+if (typeof (document.querySelector('.standard-owl')) != 'undefined' && document.querySelector('.standard-owl') != null) {
+
+    $('.standard-owl').owlCarousel({
+        loop: true,
+        // autoplay: true,
+        autoplay: false,
+        lazyLoad: true,
+        items: 3,
+        margin: 24,
+        stagePadding: 0,
+        onInitialized: centerGoMid,
+        onTranslated: centerGoMid,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+                stagePadding: 40,
+                dots: true
+            },
+            600: {
+                items: 2,
+                margin: 20
+            },
+            1200: {
+                items: 3
+            },
+            1610: {
+                items: 4
+            }
+        }
+    })
 }

@@ -40,6 +40,38 @@
  $fontSizeSmallest: 0.5rem;
  $spaceLetters:0.45px;
 
+ .fontSizeH1 {
+     font-size: $fontSizeH1;
+ }
+
+ .fontSizeH2 {
+     font-size: $fontSizeH2;
+ }
+
+ .fontSizeH3 {
+     font-size: $fontSizeH3;
+ }
+
+ .fontSizeBodyL {
+     font-size: $fontSizeBodyL;
+ }
+
+ .fontSizeBodyM {
+     font-size: $fontSizeBodyM;
+ }
+
+ .fontSizeBodyS {
+     font-size: $fontSizeBodyS;
+ }
+
+ .fontSizeBodyXS {
+     font-size: $fontSizeBodyXS;
+ }
+
+ .fontSizeBodyXSS {
+     font-size: $fontSizeBodyXSS;
+ }
+
  $bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
  $cubicBezier:cubic-bezier(.91, .11, .19, .92);
  $durationXS: 200ms;
@@ -61,7 +93,9 @@
  }
 
  .container-fluid {
-     max-width: 1440px;
+     max-width: 1540px;
+     padding-left: 30px;
+     padding-right: 30px;
  }
 
 
@@ -72,10 +106,14 @@
  }
 
  a {
+     color: white;
+     transition: $durationM;
 
+     &:hover,
      &:focus,
      &:active {
          text-decoration: none;
+         color: white;
      }
  }
 

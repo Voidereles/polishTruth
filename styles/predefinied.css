@@ -19,6 +19,38 @@
   src: url("../fonts/Kelson Sans Regular.otf");
 }
 
+.fontSizeH1 {
+  font-size: 3.85rem;
+}
+
+.fontSizeH2 {
+  font-size: 2rem;
+}
+
+.fontSizeH3 {
+  font-size: 1.625rem;
+}
+
+.fontSizeBodyL {
+  font-size: 1.25rem;
+}
+
+.fontSizeBodyM {
+  font-size: 1.125rem;
+}
+
+.fontSizeBodyS {
+  font-size: 1rem;
+}
+
+.fontSizeBodyXS {
+  font-size: 0.8rem;
+}
+
+.fontSizeBodyXSS {
+  font-size: 0.625rem;
+}
+
 h1,
 h2,
 h3,
@@ -27,15 +59,24 @@ h4 {
 }
 
 .container-fluid {
-  max-width: 1440px;
+  max-width: 1540px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .margin-100-top {
   margin-top: 6.5rem;
 }
 
-a:focus, a:active {
+a {
+  color: white;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+a:hover, a:focus, a:active {
   text-decoration: none;
+  color: white;
 }
 
 .main .btn {
