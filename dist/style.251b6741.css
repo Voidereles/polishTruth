@@ -223,6 +223,13 @@
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Anton', sans-serif;
+}
+
 .container-fluid {
   max-width: 1440px;
 }
@@ -325,6 +332,8 @@ table a:hover {
 body {
   font-family: 'Kelson-Sans', sans-serif;
   background: black;
+  color: white;
+  overflow-x: hidden;
 }
 
 .header {
@@ -654,8 +663,8 @@ body {
 
 .hero__big-container {
   width: 100%;
-  height: calc(100vh - 150px + (167px / 2));
-  max-height: 800px;
+  height: calc(100vh - 150px + 170px + (167px / 2));
+  max-height: 850px;
 }
 
 .hero__big-container .hero__item {
@@ -754,7 +763,8 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
   -webkit-transition: 400ms;
   transition: 400ms;
 }
@@ -827,6 +837,68 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.under-slider {
+  position: relative;
+}
+
+.under-slider__decoration {
+  position: absolute;
+  left: -10vw;
+  top: calc(-167px / 2);
+}
+
+.under-slider__decoration::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.88)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.under-slider__decoration-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.under-slider__content {
+  position: relative;
+  z-index: 2;
+  margin-left: 5vw;
+  max-width: 580px;
+}
+
+.under-slider__item-time {
+  font-size: 1.625rem;
+  margin-right: 1rem;
+}
+
+.under-slider__author, .under-slider__category, .under-slider__comment {
+  color: white;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.under-slider__author span, .under-slider__category span, .under-slider__comment span {
+  margin-left: 0.25rem;
+}
+
+.under-slider__heading {
+  font-size: 3.85rem;
+  margin-top: 0.5rem;
 }
 
 @-webkit-keyframes fade5 {

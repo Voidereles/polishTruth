@@ -24,17 +24,9 @@
  $ptRed50:rgba(226, 10, 10, 0.5);
  $black88:rgba(0, 0, 0, .88);
  $black62:rgba(0, 0, 0, .62);
- $ptDarkGrey:#303030;
+ $ptDarkGrey:#1a1a1a;
  $ptBlackWhite:linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
 
- $backgroundGrey:#f2f1e6;
-
- $kongresDark: #231f20;
- $kongresOrange: #f47826;
- $kongresLightBlue: #2384ba;
- $kongresBlueForGradient: #37a0cd;
- $kongresDarkGrey:#58595B;
- $kongresGradient: linear-gradient(45deg, rgba(35, 132, 186, 1) 0%, rgba(55, 160, 205, 1) 100%);
 
 
  $fontSizeH1:3.85rem;
@@ -60,38 +52,20 @@
  //     max-width: 1700px;
  // }
 
- ::selection {
-     background: $kongresLightBlue;
-     color: white;
+
+ h1,
+ h2,
+ h3,
+ h4 {
+     font-family: 'Anton', sans-serif;
  }
 
  .container-fluid {
      max-width: 1440px;
  }
 
- .color-dark {
-     color: $kongresDark;
- }
 
- .color-blue {
-     color: $kongresLightBlue;
- }
 
- .color-orange {
-     color: $kongresOrange;
- }
-
- .background-dark {
-     background: $kongresDark;
- }
-
- .color-dark-gradient {
-     background: $kongresDark;
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     text-shadow: none;
- }
 
  .margin-100-top {
      margin-top: 6.5rem;
@@ -125,34 +99,26 @@
          background: white;
          content: '';
          margin-left: 0.5rem;
+         transition: $durationM;
      }
 
      &:hover {
          color: white;
-         transform: scale(1.1);
+
+
+         &::after {
+             width: 16.5px;
+         }
      }
 
- }
+     &:focus {
+         box-shadow: none;
+     }
 
- .page-link {
-     color: $kongresLightBlue;
- }
-
- .page-item.active .page-link {
-     background-color: $kongresLightBlue;
-     border-color: $kongresLightBlue;
  }
 
  .columns-2 {
      columns: 2;
- }
-
- table a {
-     color: $kongresLightBlue;
-
-     &:hover {
-         color: $kongresLightBlue;
-     }
  }
 
  @media (max-width:992px) {

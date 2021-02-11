@@ -19,42 +19,15 @@
   src: url("../fonts/Kelson Sans Regular.otf");
 }
 
-::-moz-selection {
-  background: #2384ba;
-  color: white;
-}
-
-::selection {
-  background: #2384ba;
-  color: white;
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Anton', sans-serif;
 }
 
 .container-fluid {
   max-width: 1440px;
-}
-
-.color-dark {
-  color: #231f20;
-}
-
-.color-blue {
-  color: #2384ba;
-}
-
-.color-orange {
-  color: #f47826;
-}
-
-.background-dark {
-  background: #231f20;
-}
-
-.color-dark-gradient {
-  background: #231f20;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none;
 }
 
 .margin-100-top {
@@ -91,34 +64,26 @@ a:focus, a:active {
   background: white;
   content: '';
   margin-left: 0.5rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 .main .btn:hover {
   color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
-.page-link {
-  color: #2384ba;
+.main .btn:hover::after {
+  width: 16.5px;
 }
 
-.page-item.active .page-link {
-  background-color: #2384ba;
-  border-color: #2384ba;
+.main .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .columns-2 {
   -webkit-columns: 2;
           columns: 2;
-}
-
-table a {
-  color: #2384ba;
-}
-
-table a:hover {
-  color: #2384ba;
 }
 
 @media (max-width: 992px) {

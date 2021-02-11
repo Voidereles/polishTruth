@@ -1,10 +1,10 @@
-import 'bootstrap';
-import 'owl.carousel';
-import './scripts/magicLine.js';
+// import 'bootstrap';
+// import 'owl.carousel';
+// import './scripts/magicLine.js';
 
-if (module.hot) {
-    module.hot.accept()
-}
+// if (module.hot) {
+//     module.hot.accept()
+// }
 
 function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
@@ -99,8 +99,8 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
 
     $('.hero__carousel').owlCarousel({
         loop: true,
-        // autoplay: true,
-        autoplay: false,
+        autoplay: true,
+        // autoplay: false,
         lazyLoad: true,
         items: 3,
         margin: 24,
@@ -123,6 +123,14 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
             }
         }
     })
+
+    // $('.hero__big-container').on('mouseover', function () {
+    //     $('.hero__carousel').trigger("autoplay.stop.owl");
+    //     console.log('dasd');
+    // });
+    // $('.hero__big-container').on('mouseout', function () {
+    //     $('.hero__carousel').trigger("play.owl.carousel");
+    // });
 
     if (innerWidth < 1200) {
         document.querySelectorAll('.owl-item').forEach(element => {

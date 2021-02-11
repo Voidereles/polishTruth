@@ -1,11 +1,13 @@
-@import url('bootstrap/dist/css/bootstrap.min.css');
-@import url('owl.carousel/dist/assets/owl.carousel.css');
+// @import url('bootstrap/dist/css/bootstrap.min.css');
+// @import url('owl.carousel/dist/assets/owl.carousel.css');
 
 @import 'predefinied.scss';
 
 body {
     font-family: 'Kelson-Sans', sans-serif;
     background: black;
+    color: white;
+    overflow-x: hidden;
     // font-family: 'Anton', sans-serif;
 }
 
@@ -272,6 +274,8 @@ body {
 
 .main {
     margin-top: 150px;
+
+    background: $ptDarkGrey;
 }
 
 .hero {
@@ -281,8 +285,9 @@ body {
 
     &__big-container {
         width: 100%;
-        height: calc(100vh - 150px + (167px / 2));
-        max-height: 800px;
+        height: calc(100vh - 150px + 170px + (167px / 2));
+        padding-bottom: calc(167px / 2);
+        max-height: 850px;
 
         .hero__item {
             animation: fade5 5s linear;
@@ -364,7 +369,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        cursor: pointer;
+        cursor: grab;
         transition: $durationM;
 
         &::before {
@@ -438,6 +443,159 @@ body {
         height: 100%;
         width: 100%;
         z-index: -1;
+    }
+}
+
+.left-column {
+    max-width: 70%;
+    flex: 0 0 70%
+}
+
+.right-column {
+    max-width: 30%;
+    flex: 0 0 30%;
+    padding-top: 150px;
+    padding-left: 3rem;
+}
+
+.under-slider {
+    position: relative;
+
+
+    &__decoration {
+        position: absolute;
+        left: -70px;
+        top: calc(-167px / 2);
+        max-width: 500px;
+
+        &::before {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: $durationM;
+        }
+
+        &-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        margin-left: 15vw;
+        max-width: 100%;
+        padding-top: 150px;
+    }
+
+    &__item-time {
+        font-size: $fontSizeBodyS;
+        margin-right: 1rem;
+    }
+
+    &__author,
+    &__category,
+    &__comment {
+        color: white;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: $fontSizeBodyXS;
+
+        span {
+            margin-left: 0.25rem;
+        }
+    }
+
+    &__heading {
+        font-size: $fontSizeH1;
+        margin-top: 0.5rem;
+    }
+
+    &__subheading {
+        font-size: $fontSizeH2;
+        line-height: 1.6;
+        color: $ptRed;
+    }
+
+
+}
+
+.categories {
+    border-left: 7px solid black;
+    padding-left: 3rem;
+
+    &__heading {
+        line-height: 0.8;
+        font-size: $fontSizeH2;
+    }
+
+    &__heading-smaller {
+        font-size: $fontSizeBodyS;
+    }
+
+    &__ul {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
+    &__link {
+        color: white;
+        line-height: 3;
+        transition: $durationM;
+
+        &:hover {
+            color: $ptRed;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.newsletter {
+    &__container {
+        background: $ptRed;
+    }
+
+    &__heading {
+        line-height: 0.8;
+        font-size: $fontSizeH2;
+    }
+
+    &__heading-smaller {
+        font-size: $fontSizeBodyS;
+    }
+
+    &__input {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        font-size: $fontSizeBodyXS;
+        padding: 0 1rem;
+        flex-grow: 10;
+    }
+
+    &__p {
+        font-size: $fontSizeBodyXS;
+    }
+
+    &__small {
+        font-size: $fontSizeBodyXSS;
+    }
+
+    .main &__btn {
+        background: black;
+
+        &:hover {
+            transform: none;
+        }
     }
 }
 
