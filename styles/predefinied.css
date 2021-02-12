@@ -19,6 +19,10 @@
   src: url("../fonts/Kelson Sans Regular.otf");
 }
 
+.fontGrey {
+  color: #747474;
+}
+
 .fontSizeH1 {
   font-size: 3.85rem;
 }

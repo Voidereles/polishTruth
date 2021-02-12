@@ -27,7 +27,9 @@
  $ptDarkGrey:#1a1a1a;
  $ptBlackWhite:linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
 
-
+ .fontGrey {
+     color: $ptGrey;
+ }
 
  $fontSizeH1:3.85rem;
  $fontSizeH2: 2rem;

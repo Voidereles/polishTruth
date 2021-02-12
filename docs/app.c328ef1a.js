@@ -21891,15 +21891,9 @@ if (typeof document.querySelector('.hero') != 'undefined' && document.querySelec
         items: 3
       }
     }
-  }); // $('.hero__big-container').on('mouseover', function () {
-  //     $('.hero__carousel').trigger("autoplay.stop.owl");
-  //     console.log('dasd');
-  // });
-  // $('.hero__big-container').on('mouseout', function () {
-  //     $('.hero__carousel').trigger("play.owl.carousel");
-  // });
+  });
 
-  if (innerWidth < 1200) {
+  if (innerWidth > 1200) {
     document.querySelectorAll('.owl-item').forEach(function (element) {
       element.onclick = function () {
         var owlPosition = element.firstElementChild.getAttribute('data-owl-target') + 3;
@@ -21972,7 +21966,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51030" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50322" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

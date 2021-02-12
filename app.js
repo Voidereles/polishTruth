@@ -76,13 +76,7 @@ $(function () {
 
     headerOnScroll();
     headerMoveLinks();
-
-
-
-
-
     menuResponsive();
-
 });
 
 if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySelector('.hero') != null) {
@@ -124,15 +118,7 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
         }
     })
 
-    // $('.hero__big-container').on('mouseover', function () {
-    //     $('.hero__carousel').trigger("autoplay.stop.owl");
-    //     console.log('dasd');
-    // });
-    // $('.hero__big-container').on('mouseout', function () {
-    //     $('.hero__carousel').trigger("play.owl.carousel");
-    // });
-
-    if (innerWidth < 1200) {
+    if (innerWidth > 1200) {
         document.querySelectorAll('.owl-item').forEach(element => {
             element.onclick = function () {
                 let owlPosition = element.firstElementChild.getAttribute('data-owl-target') + 3;

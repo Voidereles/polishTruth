@@ -213,6 +213,10 @@
   src: url("Kelson Sans Regular.cda63107.otf");
 }
 
+.fontGrey {
+  color: #747474;
+}
+
 .fontSizeH1 {
   font-size: 3.85rem;
 }
@@ -1312,6 +1316,104 @@ body {
 
 .popular-tags a:hover {
   text-decoration: underline;
+}
+
+.interviews {
+  width: 100%;
+}
+
+.interviews__grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 40px;
+  -ms-grid-columns: (minmax(225px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+}
+
+.interviews__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.interviews__img {
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.interviews__item-time {
+  font-size: 0.8rem;
+}
+
+.interviews__name {
+  font-size: 1.125rem;
+}
+
+.quote {
+  width: 100%;
+  max-width: calc(1540px);
+  margin: auto;
+  height: 270px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quote::before {
+  content: '';
+  background: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.quote__background {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quote figure {
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+}
+
+.quote figcaption {
+  font-size: 1.625rem;
+}
+
+.footer__list {
+  max-width: 750px;
+  list-style-type: none;
 }
 
 @-webkit-keyframes fade5 {
