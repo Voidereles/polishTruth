@@ -59,15 +59,15 @@
  }
 
  .fontSizeBodyM {
-     font-size: $fontSizeBodyM;
+     font-size: $fontSizeBodyM !important;
  }
 
  .fontSizeBodyS {
-     font-size: $fontSizeBodyS;
+     font-size: $fontSizeBodyS !important;
  }
 
  .fontSizeBodyXS {
-     font-size: $fontSizeBodyXS;
+     font-size: $fontSizeBodyXS !important;
  }
 
  .fontSizeBodyXSS {
@@ -116,6 +116,12 @@
      &:active {
          text-decoration: none;
          color: white;
+     }
+
+     &.hover-underline:hover {
+         .standard-owl__heading {
+             text-decoration: underline;
+         }
      }
  }
 

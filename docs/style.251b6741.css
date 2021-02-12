@@ -234,15 +234,15 @@
 }
 
 .fontSizeBodyM {
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
 }
 
 .fontSizeBodyS {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .fontSizeBodyXS {
-  font-size: 0.8rem;
+  font-size: 0.8rem !important;
 }
 
 .fontSizeBodyXSS {
@@ -275,6 +275,10 @@ a {
 a:hover, a:focus, a:active {
   text-decoration: none;
   color: white;
+}
+
+a.hover-underline:hover .standard-owl__heading {
+  text-decoration: underline;
 }
 
 .main .btn {
@@ -738,6 +742,20 @@ body {
   margin-top: calc(167px / 2);
 }
 
+.main::before {
+  content: '';
+  background-image: url("bars.426de088.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  right: -300px;
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  min-height: 900px;
+  height: 85vh;
+  z-index: 1;
+}
+
 .hero {
   color: white;
   position: relative;
@@ -784,6 +802,7 @@ body {
 .hero__big-container .hero__img {
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
+  z-index: 1;
 }
 
 .hero__big-container .hero__heading {
@@ -912,6 +931,10 @@ body {
   bottom: calc(-167px / 2);
   right: 0;
   margin-left: auto;
+}
+
+.hero__carousel .owl-item.center {
+  display: none;
 }
 
 .hero__carousel .owl-nav button.owl-prev,
@@ -1075,6 +1098,10 @@ body {
 
 .standard-owl__item--gallery::before {
   background-image: url("gallery.aa98928a.svg");
+}
+
+.standard-owl__item a:hover ~ a.hover-underline .standard-owl__heading {
+  text-decoration: underline;
 }
 
 .standard-owl__img {
