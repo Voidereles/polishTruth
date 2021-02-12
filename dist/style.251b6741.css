@@ -320,6 +320,80 @@ a:hover, a:focus, a:active {
           box-shadow: none;
 }
 
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  top: 50%;
+  -webkit-transform: translateY(calc(-50% - 75px));
+          transform: translateY(calc(-50% - 75px));
+  padding: 0.75rem 0.45rem !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: -1rem;
+  position: absolute;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background: url("next.a40e4105.svg");
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  z-index: 1;
+  position: relative;
+  color: transparent;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.owl-carousel .owl-nav button.owl-prev::before,
+.owl-carousel .owl-nav button.owl-next::before {
+  content: '';
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-prev:focus,
+.owl-carousel .owl-nav button.owl-next:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev:active,
+.owl-carousel .owl-nav button.owl-next:active {
+  -webkit-transform: translateY(calc(-50% - 75px)) scale(0.695);
+          transform: translateY(calc(-50% - 75px)) scale(0.695);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  left: initial;
+  background: url("next.a40e4105.svg");
+  right: -1rem;
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+  -webkit-transform: rotateZ(0);
+          transform: rotateZ(0);
+}
+
 .columns-2 {
   -webkit-columns: 2;
           columns: 2;
@@ -660,6 +734,10 @@ body {
   background: #1a1a1a;
 }
 
+.main__content {
+  margin-top: calc(167px / 2);
+}
+
 .hero {
   color: white;
   position: relative;
@@ -688,6 +766,10 @@ body {
           justify-content: center;
   cursor: initial;
   opacity: 1;
+}
+
+.hero__big-container .hero__item .hero__btn {
+  margin-bottom: 0;
 }
 
 .hero__big-container .hero__item:hover {
@@ -787,9 +869,8 @@ body {
   transition: 400ms;
 }
 
-.hero__item:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+.hero__item:hover .hero__btn {
+  margin-bottom: 0;
 }
 
 .hero__category, .hero__author, .hero__comment {
@@ -821,7 +902,7 @@ body {
 }
 
 .main .hero__btn {
-  display: none;
+  margin-bottom: -45px;
 }
 
 .hero__carousel {
@@ -831,6 +912,27 @@ body {
   bottom: calc(-167px / 2);
   right: 0;
   margin-left: auto;
+}
+
+.hero__carousel .owl-nav button.owl-prev,
+.hero__carousel .owl-nav button.owl-next {
+  top: 50%;
+  -webkit-transform: translateY(calc(-50%));
+          transform: translateY(calc(-50%));
+}
+
+.hero__carousel .owl-nav button.owl-prev:active,
+.hero__carousel .owl-nav button.owl-next:active {
+  -webkit-transform: translateY(calc(-50%)) scale(0.695);
+          transform: translateY(calc(-50%)) scale(0.695);
+}
+
+.hero__carousel .owl-nav button.owl-prev {
+  left: -2rem;
+}
+
+.hero__carousel .owl-nav button.owl-next {
+  right: -2rem;
 }
 
 .hero__img {
@@ -856,8 +958,8 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
-  padding-top: 150px;
-  padding-left: 3rem;
+  padding-top: calc(150px - 167px/2);
+  padding-left: 5rem;
 }
 
 .under-slider {
@@ -869,6 +971,8 @@ body {
   left: 0;
   top: calc(-167px / 2);
   max-width: 460px;
+  -webkit-transform: translateY(calc(-167px / 2));
+          transform: translateY(calc(-167px / 2));
 }
 
 .under-slider__decoration::before {
@@ -896,7 +1000,7 @@ body {
   z-index: 2;
   margin-left: 250px;
   max-width: 100%;
-  padding-top: 150px;
+  padding-top: calc(150px - 167px/2);
 }
 
 .under-slider__item-time {
@@ -1010,80 +1114,6 @@ body {
   text-overflow: ellipsis;
   color: #747474;
   font-size: 0.8rem;
-}
-
-.standard-owl .owl-nav button.owl-prev,
-.standard-owl .owl-nav button.owl-next {
-  top: 50%;
-  -webkit-transform: translateY(calc(-50% - 75px));
-          transform: translateY(calc(-50% - 75px));
-  padding: 0.75rem 0.45rem !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  left: -1rem;
-  position: absolute;
-  -webkit-transition: 400ms;
-  transition: 400ms;
-}
-
-.standard-owl .owl-nav button.owl-prev span,
-.standard-owl .owl-nav button.owl-next span {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background: url("next.a40e4105.svg");
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
-  z-index: 1;
-  position: relative;
-  color: transparent;
-  width: 32px;
-  height: 32px;
-  display: block;
-}
-
-.standard-owl .owl-nav button.owl-prev::before,
-.standard-owl .owl-nav button.owl-next::before {
-  content: '';
-  background: black;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  position: absolute;
-}
-
-.standard-owl .owl-nav button.owl-prev:focus,
-.standard-owl .owl-nav button.owl-next:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
-  border: none;
-}
-
-.standard-owl .owl-nav button.owl-prev:active,
-.standard-owl .owl-nav button.owl-next:active {
-  -webkit-transform: translateY(calc(-50% - 75px)) scale(0.695);
-          transform: translateY(calc(-50% - 75px)) scale(0.695);
-}
-
-.standard-owl .owl-nav button.owl-next {
-  left: initial;
-  background: url("next.a40e4105.svg");
-  right: -1rem;
-}
-
-.standard-owl .owl-nav button.owl-next span {
-  -webkit-transform: rotateZ(0);
-          transform: rotateZ(0);
 }
 
 .gallery__grid {

@@ -276,6 +276,10 @@ body {
     margin-top: 150px;
 
     background: $ptDarkGrey;
+
+    &__content {
+        margin-top: calc(167px / 2);
+    }
 }
 
 .hero {
@@ -300,8 +304,13 @@ body {
             cursor: initial;
             opacity: 1;
 
+            .hero__btn {
+                margin-bottom: 0;
+            }
+
             &:hover {
                 transform: none;
+
             }
 
             &::before {
@@ -384,7 +393,11 @@ body {
         }
 
         &:hover {
-            transform: translateY(-0.5rem);
+            // transform: translateY(-0.5rem);
+
+            .hero__btn {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -422,7 +435,7 @@ body {
     }
 
     .main &__btn {
-        display: none;
+        margin-bottom: -45px;
     }
 
     &__carousel {
@@ -432,8 +445,30 @@ body {
         bottom: calc(-167px / 2);
         right: 0;
         margin-left: auto;
-    }
 
+
+
+
+        .owl-nav button.owl-prev,
+        .owl-nav button.owl-next {
+            top: 50%;
+            transform: translateY(calc(-50%));
+
+            &:active {
+                transform: translateY(calc(-50%)) scale(0.695);
+            }
+        }
+
+        .owl-nav button.owl-prev {
+            left: -2rem;
+        }
+
+        .owl-nav button.owl-next {
+            right: -2rem;
+        }
+
+
+    }
 
     &__img {
         position: absolute;
@@ -454,8 +489,8 @@ body {
 .right-column {
     max-width: 30%;
     flex: 0 0 30%;
-    padding-top: 150px;
-    padding-left: 3rem;
+    padding-top: calc(150px - 167px/2);
+    padding-left: 5rem;
 }
 
 .under-slider {
@@ -467,6 +502,7 @@ body {
         left: 0;
         top: calc(-167px / 2);
         max-width: 460px;
+        transform: translateY(calc(-167px / 2));
 
         &::before {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
@@ -491,7 +527,7 @@ body {
         z-index: 2;
         margin-left: 250px;
         max-width: 100%;
-        padding-top: 150px;
+        padding-top: calc(150px - 167px/2)
     }
 
     &__item-time {
@@ -616,64 +652,6 @@ body {
         font-size: $fontSizeBodyXS;
     }
 
-    .owl-nav button.owl-prev,
-    .owl-nav button.owl-next {
-        top: 50%;
-        transform: translateY(calc(-50% - 75px));
-        padding: 0.75rem 0.45rem !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        left: -1rem;
-        position: absolute;
-        transition: $durationM;
-
-        span {
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            background: url('../images/next.svg');
-            transform: rotateZ(180deg);
-            z-index: 1;
-            position: relative;
-            color: transparent;
-            width: 32px;
-            height: 32px;
-            display: block;
-        }
-
-        &::before {
-            content: '';
-            background: black;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            position: absolute;
-        }
-
-        &:focus {
-            box-shadow: none;
-            outline: none;
-            border: none;
-        }
-
-        &:active {
-            transform: translateY(calc(-50% - 75px)) scale(0.695);
-        }
-    }
-
-    .owl-nav button.owl-next {
-        left: initial;
-        background: url('../images/next.svg');
-        right: -1rem;
-
-        span {
-            transform: rotateZ(0);
-        }
-
-    }
 }
 
 .gallery {

@@ -126,6 +126,80 @@ a:hover, a:focus, a:active {
           box-shadow: none;
 }
 
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  top: 50%;
+  -webkit-transform: translateY(calc(-50% - 75px));
+          transform: translateY(calc(-50% - 75px));
+  padding: 0.75rem 0.45rem !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: -1rem;
+  position: absolute;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background: url("../images/next.svg");
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  z-index: 1;
+  position: relative;
+  color: transparent;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.owl-carousel .owl-nav button.owl-prev::before,
+.owl-carousel .owl-nav button.owl-next::before {
+  content: '';
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-prev:focus,
+.owl-carousel .owl-nav button.owl-next:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev:active,
+.owl-carousel .owl-nav button.owl-next:active {
+  -webkit-transform: translateY(calc(-50% - 75px)) scale(0.695);
+          transform: translateY(calc(-50% - 75px)) scale(0.695);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  left: initial;
+  background: url("../images/next.svg");
+  right: -1rem;
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+  -webkit-transform: rotateZ(0);
+          transform: rotateZ(0);
+}
+
 .columns-2 {
   -webkit-columns: 2;
           columns: 2;

@@ -104,7 +104,7 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
         margin: 24,
         stagePadding: 0,
         center: true,
-        nav: false,
+        nav: true,
         onInitialized: centerGoMid,
         onTranslated: centerGoMid,
         autoplayHoverPause: true,
@@ -114,22 +114,24 @@ if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySel
             0: {
                 items: 1,
                 margin: 0,
-                dots: true
+                dots: true,
+                nav: false
             },
             1200: {
-                items: 3
+                items: 3,
+                nav: true
             }
         }
     })
 
-    if (innerWidth > 1200) {
-        document.querySelectorAll('.owl-item').forEach(element => {
-            element.onclick = function () {
-                let owlPosition = element.firstElementChild.getAttribute('data-owl-target') + 3;
-                $('.hero__carousel').trigger("to.owl.carousel", [owlPosition, 50]);
-            }
-        });
-    }
+    // if (innerWidth > 1200) {
+    //     document.querySelectorAll('.owl-item').forEach(element => {
+    //         element.onclick = function () {
+    //             let owlPosition = element.firstElementChild.getAttribute('data-owl-target') + 3;
+    //             $('.hero__carousel').trigger("to.owl.carousel", [owlPosition, 50]);
+    //         }
+    //     });
+    // }
 }
 
 
