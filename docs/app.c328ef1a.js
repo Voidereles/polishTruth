@@ -21802,7 +21802,17 @@ function headerOnScroll() {
       $('.header ').removeClass('scrolled');
     }
   };
-}
+} // function centerGoMid(event) {
+//     if (innerWidth > 1200) {
+//         document.querySelectorAll('.owl-item').forEach(element => {
+//             if (element.classList.contains('center')) {
+//                 let centerCopy = element.innerHTML;
+//                 document.querySelector('.hero__big-container').innerHTML = centerCopy;
+//             }
+//         });
+//     }
+// }
+
 
 var navUpper = document.querySelector('.header__nav-upper');
 var navSocialIcons = document.querySelector('.header__nav-right');
@@ -21855,17 +21865,6 @@ $(function () {
 });
 
 if (typeof document.querySelector('.hero') != 'undefined' && document.querySelector('.hero') != null) {
-  function _centerGoMid(event) {
-    if (innerWidth > 1200) {
-      document.querySelectorAll('.owl-item').forEach(function (element) {
-        if (element.classList.contains('center')) {
-          var centerCopy = element.innerHTML;
-          document.querySelector('.hero__big-container').innerHTML = centerCopy;
-        }
-      });
-    }
-  }
-
   $('.hero__carousel').owlCarousel({
     loop: true,
     autoplay: true,
@@ -21876,8 +21875,8 @@ if (typeof document.querySelector('.hero') != 'undefined' && document.querySelec
     stagePadding: 0,
     center: true,
     nav: false,
-    onInitialized: _centerGoMid,
-    onTranslated: _centerGoMid,
+    // onInitialized: centerGoMid,
+    // onTranslated: centerGoMid,
     autoplayHoverPause: true,
     dots: false,
     responsiveClass: true,
@@ -21912,8 +21911,6 @@ if (typeof document.querySelector('.standard-owl') != 'undefined' && document.qu
     items: 3,
     margin: 24,
     stagePadding: 0,
-    onInitialized: centerGoMid,
-    onTranslated: centerGoMid,
     autoplayHoverPause: true,
     dots: false,
     nav: true,
@@ -21966,7 +21963,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50322" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52898" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

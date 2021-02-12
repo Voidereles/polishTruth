@@ -25,6 +25,17 @@ function headerOnScroll() {
     }
 }
 
+function centerGoMid(event) {
+    if (innerWidth > 1200) {
+        document.querySelectorAll('.owl-item').forEach(element => {
+            if (element.classList.contains('center')) {
+                let centerCopy = element.innerHTML;
+                document.querySelector('.hero__big-container').innerHTML = centerCopy;
+            }
+        });
+    }
+}
+
 const navUpper = document.querySelector('.header__nav-upper');
 const navSocialIcons = document.querySelector('.header__nav-right');
 
@@ -79,17 +90,10 @@ $(function () {
     menuResponsive();
 });
 
+
+
 if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySelector('.hero') != null) {
-    function centerGoMid(event) {
-        if (innerWidth > 1200) {
-            document.querySelectorAll('.owl-item').forEach(element => {
-                if (element.classList.contains('center')) {
-                    let centerCopy = element.innerHTML;
-                    document.querySelector('.hero__big-container').innerHTML = centerCopy;
-                }
-            });
-        }
-    }
+
 
     $('.hero__carousel').owlCarousel({
         loop: true,
@@ -139,8 +143,6 @@ if (typeof (document.querySelector('.standard-owl')) != 'undefined' && document.
         items: 3,
         margin: 24,
         stagePadding: 0,
-        onInitialized: centerGoMid,
-        onTranslated: centerGoMid,
         autoplayHoverPause: true,
         dots: false,
         nav: true,
