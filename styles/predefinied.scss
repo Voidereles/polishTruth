@@ -27,8 +27,9 @@
  $ptDarkGrey:#1a1a1a;
  $ptBlackWhite:linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
 
- .fontGrey {
+ .font-grey {
      color: $ptGrey;
+
  }
 
  $fontSizeH1:3.85rem;
@@ -227,6 +228,29 @@
 
  .columns-2 {
      columns: 2;
+ }
+
+ .data {
+
+     &__author,
+     &__category,
+     &__comment {
+         color: white;
+         margin-right: 1rem;
+         display: flex;
+         align-items: center;
+         font-size: $fontSizeBodyXS;
+
+         span {
+             margin-left: 0.25rem;
+         }
+
+         &:hover {
+             span {
+                 text-decoration: underline;
+             }
+         }
+     }
  }
 
  @media (max-width:992px) {

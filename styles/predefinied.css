@@ -19,7 +19,7 @@
   src: url("../fonts/Kelson Sans Regular.otf");
 }
 
-.fontGrey {
+.font-grey {
   color: #747474;
 }
 
@@ -207,6 +207,26 @@ a.hover-underline:hover .standard-owl__heading {
 .columns-2 {
   -webkit-columns: 2;
           columns: 2;
+}
+
+.data__author, .data__category, .data__comment {
+  color: white;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+.data__author span, .data__category span, .data__comment span {
+  margin-left: 0.25rem;
+}
+
+.data__author:hover span, .data__category:hover span, .data__comment:hover span {
+  text-decoration: underline;
 }
 
 @media (max-width: 992px) {

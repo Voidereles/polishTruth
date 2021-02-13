@@ -15,8 +15,10 @@ function headerOnScroll() {
 
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("header").style.top = "0";
+                $('.column-toggle').removeClass('header-hidden');
             } else {
                 document.getElementById("header").style.top = "-151px";
+                $('.column-toggle').addClass('header-hidden');
             }
             prevScrollpos = currentScrollPos;
         } else {
@@ -24,6 +26,107 @@ function headerOnScroll() {
         }
     }
 }
+
+
+
+
+
+
+// const body = document.querySelector('body');
+// let isEnabled = true;
+//give it to other JS file
+// function preventDefault(e) {
+//     e.preventDefault();
+// }
+
+// function preventDefaultForScrollKeys(e) {
+//     if (keys[e.keyCode]) {
+//         preventDefault(e);
+//         return false;
+//     }
+// }
+
+// modern Chrome requires { passive: false } when adding event
+// var supportsPassive = false;
+// try {
+//     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+//         get: function () {
+//             supportsPassive = true;
+//         }
+//     }));
+// } catch (e) {}
+
+// var wheelOpt = supportsPassive ? {
+//     passive: false
+// } : false;
+// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// // call this to Disable
+// function disableScroll() {
+//     body.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+//     body.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+//     body.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+//     body.addEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
+
+// // call this to Enable
+// function enableScroll() {
+//     body.removeEventListener('DOMMouseScroll', preventDefault, false);
+//     body.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+//     body.removeEventListener('touchmove', preventDefault, wheelOpt);
+//     body.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+// }
+///////////////////////////////////////////////////////////
+const columnToggle = document.querySelector('.column-toggle');
+const disableBodyScroll = () => {
+    // document.getElementById('dialog').classList.add('show');
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+    body.style.overflow = `hidden`;
+    // body.style.height = `100vh`;
+};
+const enableBodyScroll = () => {
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    body.style.overflow = `auto`;
+    body.style.overflowX = `hidden`;
+    // body.style.height = `auto`;
+    // document.getElementById('dialog').classList.remove('show');
+};
+window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const navUpper = document.querySelector('.header__nav-upper');
@@ -76,15 +179,34 @@ $(function () {
     $('.nav-toggle').click(function () {
         $('.header__nav').toggleClass('header__nav--entered');
         $('.nav-toggle').toggleClass('nav-toggle--entered');
-        $('body').toggleClass('stop-scrolling');
-        if ($('body').hasClass('stop-scrolling') == false) {
-            $('body').unbind('touchmove')
+        // $('body').toggleClass('stop-scrolling');
+        if ($('.nav-toggle').hasClass('nav-toggle--entered') || $('.column-toggle').hasClass('open')) {
+            disableBodyScroll();
         } else {
-            $('body').bind('touchmove', function (e) {
-                e.preventDefault()
-            })
+            enableBodyScroll();
         }
     });
+
+    $('.column-toggle').click(function () {
+        $('.right-column').toggleClass('open');
+        $('.column-toggle').toggleClass('open');
+        if ($('.column-toggle').hasClass('open') || $('.nav-toggle').hasClass('nav-toggle--entered')) {
+            disableBodyScroll();
+        } else {
+            enableBodyScroll();
+        }
+
+        // $('body').toggleClass('stop-scrolling');
+        // if (isEnabled == true) {
+        //     disableScroll();
+        //     isEnabled = false;
+        // } else {
+        //     enableScroll();
+        //     isEnabled = true;
+        // }
+    });
+
+
 
 
     headerOnScroll();
