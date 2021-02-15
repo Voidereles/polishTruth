@@ -135,7 +135,7 @@ $(function () {
 
     headerOnScroll();
     headerMoveLinks();
-    menuResponsive();
+    // menuResponsive();
 });
 
 

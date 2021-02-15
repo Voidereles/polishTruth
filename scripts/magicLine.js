@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     activeElLine();
 
     const navItems = document.querySelectorAll('.header__nav-li');
-    Ale
+
     for (const navItem of navItems) {
         navItem.addEventListener('mouseenter', () => {
             itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
