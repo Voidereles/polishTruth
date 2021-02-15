@@ -152,6 +152,8 @@ body {
             color: white;
             font-size: $fontSizeBodyXS;
             font-family: 'Kelson-Sans', sans-serif;
+            padding-bottom: 0;
+            line-height: 0.9;
 
             &:focus {
                 border: none;
@@ -805,6 +807,7 @@ body {
         border: none;
         outline: none;
         box-shadow: none;
+        line-height: 0.9;
 
         &:focus {
             border: none;
@@ -1030,6 +1033,10 @@ body {
             color: $ptRed;
         }
     }
+
+    &__nav-li {
+        padding: 0.5rem 1rem;
+    }
 }
 
 @keyframes fade5 {
@@ -1078,6 +1085,12 @@ body {
 //     animation: 1s fadeOut 4s forwards, 0.3s fadeIn forwards;
 // }
 
+@media (min-width:1401px) {
+    .header__logo-container {
+        padding-right: 3rem;
+    }
+}
+
 @media (max-width:1400px) {
     .header {
         &__nav-right {
@@ -1104,6 +1117,10 @@ body {
         &__title-container {
             margin-left: -70px;
         }
+    }
+
+    .newsletter__form {
+        flex-direction: column;
     }
 
     .older-articles {
@@ -1133,7 +1150,6 @@ body {
         }
     }
 }
-
 
 @media (max-width:1200px) {
 
@@ -1479,12 +1495,12 @@ body {
     }
 
     .column-toggle {
-        top: 4.5rem;
-        right: 1rem;
+        top: 70px;
+        right: 0;
         position: fixed;
         z-index: 2048;
-        width: 32px;
-        height: 32px;
+        height: calc(32px + 1rem);
+        width: calc(32px + 2rem);
         // border-radius: 50%;
         background: none;
         border: 0;
@@ -1496,10 +1512,6 @@ body {
         align-items: center;
         transition: $durationM;
         z-index: 11;
-
-        &:active {
-            transform: scale(0.9);
-        }
 
         &:focus,
         &:active {
@@ -1556,6 +1568,15 @@ body {
 
     }
 
+
+    .newsletter__form {
+        flex-direction: row;
+    }
+
+    .categories {
+        padding-left: 0;
+    }
+
     .left-column {
         flex: 0 0 100%;
         max-width: 100%;
@@ -1572,7 +1593,8 @@ body {
         height: 100%;
         overflow: scroll;
         transition: $durationM;
-        padding-right: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
 
         padding-top: calc(150px - 167px/2 + 2rem);
 

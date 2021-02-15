@@ -134,7 +134,6 @@ const navSocialIcons = document.querySelector('.header__nav-right');
 
 function menuResponsive() {
     if (innerWidth < 1400) {
-        console.log('das');
         navUpper.append(navSocialIcons);
     }
 }

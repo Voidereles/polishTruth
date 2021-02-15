@@ -21735,12 +21735,15 @@ document.addEventListener('DOMContentLoaded', function () {
     magicLine.style.opacity = 1;
   };
 
+  activeElLine();
+
   if (document.querySelector('#navList li').classList.contains('active')) {
     document.querySelector('.hero__carousel').addEventListener('load', function (event) {
       activeElLine();
     });
   }
 
+  activeElLine();
   var navItems = document.querySelectorAll('.header__nav-li');
 
   var _iterator = _createForOfIteratorHelper(navItems),
@@ -21876,7 +21879,6 @@ var navSocialIcons = document.querySelector('.header__nav-right');
 
 function menuResponsive() {
   if (innerWidth < 1400) {
-    console.log('das');
     navUpper.append(navSocialIcons);
   }
 }
@@ -22047,7 +22049,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62985" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51630" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

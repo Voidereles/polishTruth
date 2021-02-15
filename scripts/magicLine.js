@@ -12,14 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
         magicLine.style.opacity = 1;
     }
 
+    activeElLine();
+
     if (document.querySelector('#navList li').classList.contains('active')) {
         document.querySelector('.hero__carousel').addEventListener('load', (event) => {
             activeElLine();
         });
     }
 
-    const navItems = document.querySelectorAll('.header__nav-li');
 
+    activeElLine();
+
+    const navItems = document.querySelectorAll('.header__nav-li');
+    Ale
     for (const navItem of navItems) {
         navItem.addEventListener('mouseenter', () => {
             itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
