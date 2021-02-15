@@ -2,9 +2,6 @@ import 'bootstrap';
 import 'owl.carousel';
 import './scripts/magicLine.js';
 
-// if (module.hot) {
-//     module.hot.accept()
-// }
 
 function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
@@ -27,56 +24,6 @@ function headerOnScroll() {
     }
 }
 
-
-
-
-
-
-// const body = document.querySelector('body');
-// let isEnabled = true;
-//give it to other JS file
-// function preventDefault(e) {
-//     e.preventDefault();
-// }
-
-// function preventDefaultForScrollKeys(e) {
-//     if (keys[e.keyCode]) {
-//         preventDefault(e);
-//         return false;
-//     }
-// }
-
-// modern Chrome requires { passive: false } when adding event
-// var supportsPassive = false;
-// try {
-//     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-//         get: function () {
-//             supportsPassive = true;
-//         }
-//     }));
-// } catch (e) {}
-
-// var wheelOpt = supportsPassive ? {
-//     passive: false
-// } : false;
-// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-// // call this to Disable
-// function disableScroll() {
-//     body.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-//     body.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-//     body.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-//     body.addEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
-
-// // call this to Enable
-// function enableScroll() {
-//     body.removeEventListener('DOMMouseScroll', preventDefault, false);
-//     body.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-//     body.removeEventListener('touchmove', preventDefault, wheelOpt);
-//     body.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
-///////////////////////////////////////////////////////////
 const columnToggle = document.querySelector('.column-toggle');
 const disableBodyScroll = () => {
     // document.getElementById('dialog').classList.add('show');
@@ -107,36 +54,14 @@ window.addEventListener('scroll', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const navUpper = document.querySelector('.header__nav-upper');
 const navSocialIcons = document.querySelector('.header__nav-right');
 
-function menuResponsive() {
-    if (innerWidth < 1400) {
-        navUpper.append(navSocialIcons);
-    }
-}
+// function menuResponsive() {
+//     if (innerWidth < 1400) {
+//         navUpper.append(navSocialIcons);
+//     }
+// }
 
 const headerMoveLinks = () => {
     if (window.innerWidth >= 1200) {
@@ -149,7 +74,7 @@ const headerMoveLinks = () => {
 
 window.addEventListener('resize', function (event) {
     headerMoveLinks();
-    menuResponsive();
+    // menuResponsive();
 });
 
 

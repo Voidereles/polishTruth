@@ -21745,6 +21745,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   activeElLine();
   var navItems = document.querySelectorAll('.header__nav-li');
+  Ale;
 
   var _iterator = _createForOfIteratorHelper(navItems),
       _step;
@@ -21782,9 +21783,6 @@ require("owl.carousel");
 
 require("./scripts/magicLine.js");
 
-// if (module.hot) {
-//     module.hot.accept()
-// }
 function headerOnScroll() {
   var prevScrollpos = window.pageYOffset;
 
@@ -21807,47 +21805,7 @@ function headerOnScroll() {
       $('.header ').removeClass('scrolled');
     }
   };
-} // const body = document.querySelector('body');
-// let isEnabled = true;
-//give it to other JS file
-// function preventDefault(e) {
-//     e.preventDefault();
-// }
-// function preventDefaultForScrollKeys(e) {
-//     if (keys[e.keyCode]) {
-//         preventDefault(e);
-//         return false;
-//     }
-// }
-// modern Chrome requires { passive: false } when adding event
-// var supportsPassive = false;
-// try {
-//     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-//         get: function () {
-//             supportsPassive = true;
-//         }
-//     }));
-// } catch (e) {}
-// var wheelOpt = supportsPassive ? {
-//     passive: false
-// } : false;
-// var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-// // call this to Disable
-// function disableScroll() {
-//     body.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-//     body.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-//     body.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-//     body.addEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
-// // call this to Enable
-// function enableScroll() {
-//     body.removeEventListener('DOMMouseScroll', preventDefault, false);
-//     body.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-//     body.removeEventListener('touchmove', preventDefault, wheelOpt);
-//     body.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-// }
-///////////////////////////////////////////////////////////
-
+}
 
 var columnToggle = document.querySelector('.column-toggle');
 
@@ -21875,13 +21833,11 @@ window.addEventListener('scroll', function () {
   document.documentElement.style.setProperty('--scroll-y', "".concat(window.scrollY, "px"));
 });
 var navUpper = document.querySelector('.header__nav-upper');
-var navSocialIcons = document.querySelector('.header__nav-right');
-
-function menuResponsive() {
-  if (innerWidth < 1400) {
-    navUpper.append(navSocialIcons);
-  }
-}
+var navSocialIcons = document.querySelector('.header__nav-right'); // function menuResponsive() {
+//     if (innerWidth < 1400) {
+//         navUpper.append(navSocialIcons);
+//     }
+// }
 
 var headerMoveLinks = function headerMoveLinks() {
   if (window.innerWidth >= 1200) {
@@ -21893,8 +21849,7 @@ var headerMoveLinks = function headerMoveLinks() {
 };
 
 window.addEventListener('resize', function (event) {
-  headerMoveLinks();
-  menuResponsive();
+  headerMoveLinks(); // menuResponsive();
 });
 
 function centerGoMid(event) {
@@ -22049,7 +22004,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51630" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54490" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

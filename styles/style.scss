@@ -61,6 +61,7 @@ body {
             justify-content: center;
             align-items: flex-end;
             padding: 1rem 0;
+            padding-right: 3rem;
         }
     }
 
@@ -231,6 +232,8 @@ body {
 
     &__nav-right {
         padding: 1.5rem 0;
+        height: 80px;
+        align-items: center;
     }
 
     &__social-link {
@@ -1085,20 +1088,19 @@ body {
 //     animation: 1s fadeOut 4s forwards, 0.3s fadeIn forwards;
 // }
 
-@media (min-width:1401px) {
-    .header__logo-container {
-        padding-right: 3rem;
-    }
-}
 
 @media (max-width:1400px) {
     .header {
         &__nav-right {
-            padding: 0.5rem;
+            padding: 0.5rem 0;
+        }
+
+        &__logo-container {
+            padding-right: 2rem;
         }
 
         &.navbar .container-fluid {
-            justify-content: space-around;
+            justify-content: flex-start
         }
     }
 
@@ -1627,6 +1629,35 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .under-slider {
+        &__decoration {
+            // top: -20px;
+            // width: calc(100% + 2rem);
+            // left: -1rem;
+            // left: 20%;
+            width: 100%;
+
+            position: initial;
+            margin-top: -1rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::after {
+                left: -200px;
+                top: 35px;
+            }
+        }
+
+
+        &__content {
+            margin-left: 0;
+            padding-top: 0;
+            margin-top: -3.25rem;
+        }
+    }
+}
+
 @media (max-width:480px) {
     .hero {
         &__item {
@@ -1657,21 +1688,7 @@ body {
     }
 
     .under-slider {
-        &__decoration {
-            // top: -20px;
-            // width: calc(100% + 2rem);
-            // left: -1rem;
-            // left: 20%;
-            width: 100%;
 
-            position: initial;
-            margin-top: -1.25rem;
-
-            &::after {
-                left: -200px;
-                top: 35px;
-            }
-        }
 
         .hero__item-data>div {
             flex-wrap: wrap;
@@ -1682,11 +1699,6 @@ body {
             margin-bottom: 0.5rem;
         }
 
-        &__content {
-            margin-left: 0;
-            padding-top: 0;
-            margin-top: -3.25rem;
-        }
 
         &__heading {
             font-size: $fontSizeH2;
