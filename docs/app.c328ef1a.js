@@ -22002,6 +22002,11 @@ ready(function () {
   headerOnScroll();
   headerMoveLinks();
   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  document.querySelectorAll('.owl-carousel').forEach(function (element) {
+    element.querySelectorAll('.owl-dot').forEach(function (owlDot, index) {
+      owlDot.setAttribute('aria-label', index + 1);
+    });
+  });
 });
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./scripts/owlCarousels.js":"scripts/owlCarousels.js","./scripts/magicLine.js":"scripts/magicLine.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -22031,7 +22036,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62416" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62457" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -134,4 +134,10 @@ ready(function () {
     headerOnScroll();
     headerMoveLinks();
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+    document.querySelectorAll('.owl-carousel').forEach(element => {
+        element.querySelectorAll('.owl-dot').forEach(function (owlDot, index) {
+            owlDot.setAttribute('aria-label', index + 1)
+        });
+    });
 });

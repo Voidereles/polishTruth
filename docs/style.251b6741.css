@@ -1262,6 +1262,7 @@ body {
 .categories__ul {
   padding-left: 0;
   margin-top: 1rem;
+  list-style-type: none;
 }
 
 .categories__link {
