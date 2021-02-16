@@ -21947,7 +21947,7 @@ ready(function () {
           nav: false
         },
         //zmiana
-        1220: {
+        1200: {
           items: 3,
           nav: true,
           onInitialized: centerGoMid,
@@ -22022,7 +22022,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51522" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52052" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
