@@ -289,7 +289,8 @@ ready(function () {
                     dots: true,
                     nav: false
                 },
-                1200: {
+                //zmiana
+                1210: {
                     items: 3,
                     nav: true,
                     onInitialized: centerGoMid,
