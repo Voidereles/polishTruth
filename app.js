@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'owl.carousel';
-import './scripts/owlCarousels.js';
-import './scripts/magicLine.js';
+// import './scripts/owlCarousels.js';
+// import './scripts/magicLine.js';
 
 
 const header = document.querySelector('.header');
@@ -140,4 +140,205 @@ ready(function () {
             owlDot.setAttribute('aria-label', index + 1)
         });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //magicLine
+    const mainNav = document.getElementById("navList");
+    const magicLine = document.createElement('li');
+    magicLine.classList.add('magic-line');
+    mainNav.append(magicLine);
+    let activeElement = document.querySelector('#navList .active');
+
+    const activeElLine = () => {
+        let activeWidth = parseFloat(getComputedStyle(activeElement, null).width.replace("px", ""));
+        magicLine.style.left = activeElement.offsetLeft + "px";
+        magicLine.style.width = activeWidth + "px";
+        magicLine.style.opacity = 1;
+    }
+
+    activeElLine();
+
+    if (document.querySelector('#navList li').classList.contains('active')) {
+        document.querySelector('.hero__carousel').addEventListener('load', (event) => {
+            activeElLine();
+        });
+    }
+
+
+    activeElLine();
+
+    const navItems = document.querySelectorAll('.header__nav-li');
+
+    for (const navItem of navItems) {
+        navItem.addEventListener('mouseenter', () => {
+            itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
+            itemLeftPos = navItem.offsetLeft + "px";
+            magicLine.style.left = itemLeftPos;
+            magicLine.style.width = itemWidth + "px";
+            magicLine.style.opacity = 1;
+        });
+        navItem.addEventListener('mouseleave', () => {
+            activeElLine();
+        });
+    }
+    //magicLine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // owlCarousels
+    const heroBigContainer = document.querySelector('.hero__big-container');
+
+    function centerGoMid(event) {
+        if (innerWidth > 1200) {
+            document.querySelectorAll('.owl-item').forEach(element => {
+                if (element.classList.contains('center')) {
+                    let centerCopy = element.innerHTML;
+                    heroBigContainer.innerHTML = centerCopy;
+                }
+            });
+        }
+
+    }
+
+    if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySelector('.hero') != null) {
+        $('.hero__carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            // autoplay: false,
+            lazyLoad: true,
+            items: 3,
+            margin: 24,
+            stagePadding: 0,
+            center: true,
+            nav: true,
+            onInitialized: centerGoMid,
+            onTranslated: centerGoMid,
+            autoplayHoverPause: true,
+            dots: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 0,
+                    dots: true,
+                    nav: false
+                },
+                1200: {
+                    items: 3,
+                    nav: true
+                }
+            }
+        });
+    };
+
+
+    if (typeof (document.querySelector('.standard-owl')) != 'undefined' && document.querySelector('.standard-owl') != null) {
+        $('.standard-owl').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            autoplay: false,
+            lazyLoad: true,
+            items: 3,
+            margin: 24,
+            stagePadding: 0,
+            autoplayHoverPause: true,
+            dots: false,
+            nav: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10,
+                    stagePadding: 40,
+                    dots: true
+                },
+                600: {
+                    items: 2,
+                    margin: 20
+                },
+                1200: {
+                    items: 3
+                },
+                1610: {
+                    items: 4
+                }
+            }
+        })
+    }
+    //////////
+
+
+
+
+
+
+
+
 });

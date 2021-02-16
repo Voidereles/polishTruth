@@ -1,13 +1,6 @@
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("owl.carousel/dist/assets/owl.carousel.css");
 @font-face {
-  font-family: 'Anton';
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Anton-Regular.ttf");
-}
-
-@font-face {
   font-family: 'Kelson-Sans';
   font-weight: 700;
   font-display: swap;

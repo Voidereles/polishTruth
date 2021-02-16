@@ -21714,162 +21714,6 @@ var global = arguments[3];
 
 })(window.Zepto || window.jQuery, window, document);
 
-},{}],"scripts/owlCarousels.js":[function(require,module,exports) {
-var heroBigContainer = document.querySelector('.hero__big-container');
-
-function centerGoMid(event) {
-  if (innerWidth > 1200) {
-    document.querySelectorAll('.owl-item').forEach(function (element) {
-      if (element.classList.contains('center')) {
-        var centerCopy = element.innerHTML;
-        heroBigContainer.innerHTML = centerCopy;
-      }
-    });
-  }
-}
-
-if (typeof document.querySelector('.hero') != 'undefined' && document.querySelector('.hero') != null) {
-  $('.hero__carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    // autoplay: false,
-    lazyLoad: true,
-    items: 3,
-    margin: 24,
-    stagePadding: 0,
-    center: true,
-    nav: true,
-    onInitialized: centerGoMid,
-    onTranslated: centerGoMid,
-    autoplayHoverPause: true,
-    dots: false,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        margin: 0,
-        dots: true,
-        nav: false
-      },
-      1200: {
-        items: 3,
-        nav: true
-      }
-    }
-  });
-}
-
-;
-
-if (typeof document.querySelector('.standard-owl') != 'undefined' && document.querySelector('.standard-owl') != null) {
-  $('.standard-owl').owlCarousel({
-    loop: true,
-    // autoplay: true,
-    autoplay: false,
-    lazyLoad: true,
-    items: 3,
-    margin: 24,
-    stagePadding: 0,
-    autoplayHoverPause: true,
-    dots: false,
-    nav: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        margin: 10,
-        stagePadding: 40,
-        dots: true
-      },
-      600: {
-        items: 2,
-        margin: 20
-      },
-      1200: {
-        items: 3
-      },
-      1610: {
-        items: 4
-      }
-    }
-  });
-}
-},{}],"scripts/magicLine.js":[function(require,module,exports) {
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ready(callbackFunc) {
-  if (document.readyState !== 'loading') {
-    // Document is already ready, call the callback directly
-    callbackFunc();
-  } else if (document.addEventListener) {
-    // All modern browsers to register DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', callbackFunc);
-  } else {
-    // Old IE browsers
-    document.attachEvent('onreadystatechange', function () {
-      if (document.readyState === 'complete') {
-        callbackFunc();
-      }
-    });
-  }
-}
-
-ready(function () {
-  var mainNav = document.getElementById("navList");
-  var magicLine = document.createElement('li');
-  magicLine.classList.add('magic-line');
-  mainNav.append(magicLine);
-  var activeElement = document.querySelector('#navList .active');
-
-  var activeElLine = function activeElLine() {
-    var activeWidth = parseFloat(getComputedStyle(activeElement, null).width.replace("px", ""));
-    magicLine.style.left = activeElement.offsetLeft + "px";
-    magicLine.style.width = activeWidth + "px";
-    magicLine.style.opacity = 1;
-  };
-
-  activeElLine();
-
-  if (document.querySelector('#navList li').classList.contains('active')) {
-    document.querySelector('.hero__carousel').addEventListener('load', function (event) {
-      activeElLine();
-    });
-  }
-
-  activeElLine();
-  var navItems = document.querySelectorAll('.header__nav-li');
-
-  var _iterator = _createForOfIteratorHelper(navItems),
-      _step;
-
-  try {
-    var _loop = function _loop() {
-      var navItem = _step.value;
-      navItem.addEventListener('mouseenter', function () {
-        itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
-        itemLeftPos = navItem.offsetLeft + "px";
-        magicLine.style.left = itemLeftPos;
-        magicLine.style.width = itemWidth + "px";
-        magicLine.style.opacity = 1;
-      });
-      navItem.addEventListener('mouseleave', function () {
-        activeElLine();
-      });
-    };
-
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      _loop();
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-});
 },{}],"app.js":[function(require,module,exports) {
 "use strict";
 
@@ -21877,10 +21721,14 @@ require("bootstrap");
 
 require("owl.carousel");
 
-require("./scripts/owlCarousels.js");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
-require("./scripts/magicLine.js");
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// import './scripts/owlCarousels.js';
+// import './scripts/magicLine.js';
 var header = document.querySelector('.header');
 var columnToggle = document.querySelector('.column-toggle');
 var navToggle = document.querySelector('.nav-toggle');
@@ -22006,9 +21854,143 @@ ready(function () {
     element.querySelectorAll('.owl-dot').forEach(function (owlDot, index) {
       owlDot.setAttribute('aria-label', index + 1);
     });
-  });
+  }); //magicLine
+
+  var mainNav = document.getElementById("navList");
+  var magicLine = document.createElement('li');
+  magicLine.classList.add('magic-line');
+  mainNav.append(magicLine);
+  var activeElement = document.querySelector('#navList .active');
+
+  var activeElLine = function activeElLine() {
+    var activeWidth = parseFloat(getComputedStyle(activeElement, null).width.replace("px", ""));
+    magicLine.style.left = activeElement.offsetLeft + "px";
+    magicLine.style.width = activeWidth + "px";
+    magicLine.style.opacity = 1;
+  };
+
+  activeElLine();
+
+  if (document.querySelector('#navList li').classList.contains('active')) {
+    document.querySelector('.hero__carousel').addEventListener('load', function (event) {
+      activeElLine();
+    });
+  }
+
+  activeElLine();
+  var navItems = document.querySelectorAll('.header__nav-li');
+
+  var _iterator = _createForOfIteratorHelper(navItems),
+      _step;
+
+  try {
+    var _loop = function _loop() {
+      var navItem = _step.value;
+      navItem.addEventListener('mouseenter', function () {
+        itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
+        itemLeftPos = navItem.offsetLeft + "px";
+        magicLine.style.left = itemLeftPos;
+        magicLine.style.width = itemWidth + "px";
+        magicLine.style.opacity = 1;
+      });
+      navItem.addEventListener('mouseleave', function () {
+        activeElLine();
+      });
+    };
+
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      _loop();
+    } //magicLine
+    // owlCarousels
+
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  var heroBigContainer = document.querySelector('.hero__big-container');
+
+  function centerGoMid(event) {
+    if (innerWidth > 1200) {
+      document.querySelectorAll('.owl-item').forEach(function (element) {
+        if (element.classList.contains('center')) {
+          var centerCopy = element.innerHTML;
+          heroBigContainer.innerHTML = centerCopy;
+        }
+      });
+    }
+  }
+
+  if (typeof document.querySelector('.hero') != 'undefined' && document.querySelector('.hero') != null) {
+    $('.hero__carousel').owlCarousel({
+      loop: true,
+      autoplay: true,
+      // autoplay: false,
+      lazyLoad: true,
+      items: 3,
+      margin: 24,
+      stagePadding: 0,
+      center: true,
+      nav: true,
+      onInitialized: centerGoMid,
+      onTranslated: centerGoMid,
+      autoplayHoverPause: true,
+      dots: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0,
+          dots: true,
+          nav: false
+        },
+        1200: {
+          items: 3,
+          nav: true
+        }
+      }
+    });
+  }
+
+  ;
+
+  if (typeof document.querySelector('.standard-owl') != 'undefined' && document.querySelector('.standard-owl') != null) {
+    $('.standard-owl').owlCarousel({
+      loop: true,
+      // autoplay: true,
+      autoplay: false,
+      lazyLoad: true,
+      items: 3,
+      margin: 24,
+      stagePadding: 0,
+      autoplayHoverPause: true,
+      dots: false,
+      nav: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 10,
+          stagePadding: 40,
+          dots: true
+        },
+        600: {
+          items: 2,
+          margin: 20
+        },
+        1200: {
+          items: 3
+        },
+        1610: {
+          items: 4
+        }
+      }
+    });
+  } //////////
+
 });
-},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./scripts/owlCarousels.js":"scripts/owlCarousels.js","./scripts/magicLine.js":"scripts/magicLine.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -22036,7 +22018,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60063" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63237" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
