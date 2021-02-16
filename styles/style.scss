@@ -1156,6 +1156,14 @@ body {
     }
 }
 
+@media (max-width:1340px) {
+    .under-slider__decoration {
+        left: -10%;
+        top: calc(167px / 2 + 2rem);
+    }
+
+}
+
 @media (max-width:1200px) {
 
     html,

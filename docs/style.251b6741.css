@@ -196,21 +196,21 @@
   font-family: 'Anton';
   font-weight: 400;
   font-display: swap;
-  src: url("Anton-Regular.c0fbbe8f.ttf");
+  src: url("5074e8c6a8be2f1668cf01e1c0fbbe8f.ttf");
 }
 
 @font-face {
   font-family: 'Kelson-Sans';
   font-weight: 700;
   font-display: swap;
-  src: url("Kelson Sans Bold.0844fe4a.otf");
+  src: url("303ba97f11e3ecf48460b3910844fe4a.otf");
 }
 
 @font-face {
   font-family: 'Kelson-Sans';
   font-weight: 400;
   font-display: swap;
-  src: url("Kelson Sans Regular.cda63107.otf");
+  src: url("d5c1e98098fca70cf991f9c3cda63107.otf");
 }
 
 .font-grey {
@@ -350,7 +350,7 @@ a.hover-underline:hover .standard-owl__heading {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background: url("next.a40e4105.svg");
+  background: url("d7ddfc40b3b848d53f62446ea40e4105.svg");
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
   z-index: 1;
@@ -389,7 +389,7 @@ a.hover-underline:hover .standard-owl__heading {
 
 .owl-carousel .owl-nav button.owl-next {
   left: initial;
-  background: url("next.a40e4105.svg");
+  background: url("d7ddfc40b3b848d53f62446ea40e4105.svg");
   right: -1rem;
 }
 
@@ -779,7 +779,7 @@ body {
 
 .hero__big-container::before {
   content: '';
-  background-image: url("bars.426de088.svg");
+  background-image: url("5b132d68a54b2c465287c491426de088.svg");
   background-repeat: no-repeat;
   background-position: 60px 0px;
   right: 0;
@@ -1042,7 +1042,7 @@ body {
 
 .under-slider__decoration::after {
   content: '';
-  background-image: url("bars.426de088.svg");
+  background-image: url("5b132d68a54b2c465287c491426de088.svg");
   background-repeat: no-repeat;
   background-size: contain;
   left: -260px;
@@ -1114,7 +1114,7 @@ body {
   content: '';
   right: 0.5rem;
   top: calc(150px - 0.5rem - 1.5rem);
-  background-image: url("play.5efe8b5a.svg");
+  background-image: url("fa63815a19534edefc1558dc5efe8b5a.svg");
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
@@ -1124,7 +1124,7 @@ body {
 }
 
 .standard-owl__item--gallery::before {
-  background-image: url("gallery.aa98928a.svg");
+  background-image: url("6e27b1ad32831b3c5a94ace2aa98928a.svg");
 }
 
 .standard-owl__item a:hover ~ a.hover-underline .standard-owl__heading {
@@ -1657,6 +1657,13 @@ body {
   }
   .interviews .data__category {
     margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 1340px) {
+  .under-slider__decoration {
+    left: -10%;
+    top: calc(167px / 2 + 2rem);
   }
 }
 
