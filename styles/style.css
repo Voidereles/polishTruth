@@ -1564,6 +1564,7 @@ body {
     height: auto;
   }
   .header__nav-right {
+    display: none !important;
     text-align: center;
     width: 100vw;
     max-width: 150px;

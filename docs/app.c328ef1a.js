@@ -21790,81 +21790,7 @@ ready(function () {
     _iterator.f();
   }
 });
-},{}],"app.js":[function(require,module,exports) {
-"use strict";
-
-require("bootstrap");
-
-require("owl.carousel");
-
-require("./scripts/magicLine.js");
-
-var header = document.querySelector('.header');
-var columnToggle = document.querySelector('.column-toggle');
-var navToggle = document.querySelector('.nav-toggle');
-
-function headerOnScroll() {
-  var prevScrollpos = window.pageYOffset;
-
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-
-    if (window.pageYOffset > 100) {
-      header.classList.add('scrolled');
-
-      if (prevScrollpos > currentScrollPos) {
-        header.style.top = "0";
-        columnToggle.classList.remove('header-hidden');
-      } else {
-        header.style.top = "-151px";
-        columnToggle.classList.add('header-hidden');
-      }
-
-      prevScrollpos = currentScrollPos;
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
-}
-
-var disableBodyScroll = function disableBodyScroll() {
-  var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-  var body = document.body;
-  body.style.position = 'fixed';
-  body.style.top = "-".concat(scrollY);
-  body.style.overflow = "hidden"; // body.style.height = `100vh`;
-};
-
-var enableBodyScroll = function enableBodyScroll() {
-  var body = document.body;
-  var scrollY = body.style.top;
-  body.style.position = '';
-  body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  body.style.overflow = "auto";
-  body.style.overflowX = "hidden"; // body.style.height = `auto`;
-  // document.getElementById('dialog').classList.remove('show');
-};
-
-window.addEventListener('scroll', function () {
-  document.documentElement.style.setProperty('--scroll-y', "".concat(window.scrollY, "px"));
-});
-var headerNav = document.querySelector('.header__nav');
-var headerContainerBottom = document.querySelector('.header .header__container-bottom');
-var navUpper = document.querySelector('.header__nav-upper');
-var navSocialIcons = document.querySelector('.header__nav-right');
-
-var headerMoveLinks = function headerMoveLinks() {
-  if (window.innerWidth >= 1200) {
-    headerContainerBottom.append(navSocialIcons);
-  } else {
-    headerNav.append(navSocialIcons);
-  }
-};
-
-window.addEventListener('resize', function (event) {
-  headerMoveLinks();
-});
+},{}],"scripts/owlCarousels.js":[function(require,module,exports) {
 var heroBigContainer = document.querySelector('.hero__big-container');
 
 function centerGoMid(event) {
@@ -21877,54 +21803,6 @@ function centerGoMid(event) {
     });
   }
 }
-
-function ready(callbackFunc) {
-  if (document.readyState !== 'loading') {
-    // Document is already ready, call the callback directly
-    callbackFunc();
-  } else if (document.addEventListener) {
-    // All modern browsers to register DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', callbackFunc);
-  } else {
-    // Old IE browsers
-    document.attachEvent('onreadystatechange', function () {
-      if (document.readyState === 'complete') {
-        callbackFunc();
-      }
-    });
-  }
-}
-
-ready(function () {
-  document.querySelectorAll('.owl-item').forEach(function (element) {
-    element.addEventListener('click', function () {
-      header.style.top = "0";
-    });
-  });
-  navToggle.addEventListener('click', function () {
-    headerNav.classList.toggle('header__nav--entered');
-    navToggle.classList.toggle('nav-toggle--entered');
-
-    if (navToggle.contains('nav-toggle--entered') || columnToggle.contains('open')) {
-      disableBodyScroll();
-    } else {
-      enableBodyScroll();
-    }
-  });
-  var rightColumn = document.querySelector('.right-column');
-  columnToggle.addEventListener('click', function () {
-    rightColumn.classList.toggle('open');
-    columnToggle.classList.toggle('open');
-
-    if (navToggle.contains('nav-toggle--entered') || columnToggle.contains('open')) {
-      disableBodyScroll();
-    } else {
-      enableBodyScroll();
-    }
-  });
-  headerOnScroll();
-  headerMoveLinks();
-});
 
 if (typeof document.querySelector('.hero') != 'undefined' && document.querySelector('.hero') != null) {
   $('.hero__carousel').owlCarousel({
@@ -21992,7 +21870,140 @@ if (typeof document.querySelector('.standard-owl') != 'undefined' && document.qu
     }
   });
 }
-},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./scripts/magicLine.js":"scripts/magicLine.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"app.js":[function(require,module,exports) {
+"use strict";
+
+require("bootstrap");
+
+require("owl.carousel");
+
+require("./scripts/magicLine.js");
+
+require("./scripts/owlCarousels.js");
+
+var header = document.querySelector('.header');
+var columnToggle = document.querySelector('.column-toggle');
+var navToggle = document.querySelector('.nav-toggle');
+var headerNav = document.querySelector('.header__nav');
+var navUpper = document.querySelector('.header__nav-upper');
+var navSocialIcons = document.querySelector('.header__nav-right');
+var headerContainerBottom = document.querySelector('.header .header__container-bottom');
+
+var headerMoveLinks = function headerMoveLinks() {
+  // if (window.innerWidth >= 1200) {
+  //     headerContainerBottom.append(navSocialIcons);
+  // } else {
+  //     headerNav.append(navSocialIcons);
+  // }
+  if (window.innerWidth < 1200) {
+    headerNav.append(navSocialIcons);
+    navSocialIcons.style.display = "flex !Important"; // headerContainerBottom.append(navSocialIcons);
+  } else {
+    // headerNav.append(navSocialIcons);
+    headerContainerBottom.append(navSocialIcons);
+  }
+};
+
+headerMoveLinks();
+
+function headerOnScroll() {
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+
+    if (window.pageYOffset > 100) {
+      header.classList.add('scrolled');
+
+      if (prevScrollpos > currentScrollPos) {
+        header.style.top = "0";
+        columnToggle.classList.remove('header-hidden');
+      } else {
+        header.style.top = "-151px";
+        columnToggle.classList.add('header-hidden');
+      }
+
+      prevScrollpos = currentScrollPos;
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+}
+
+var disableBodyScroll = function disableBodyScroll() {
+  var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+  var body = document.body;
+  body.style.position = 'fixed';
+  body.style.top = "-".concat(scrollY);
+  body.style.overflow = "hidden"; // body.style.height = `100vh`;
+};
+
+var enableBodyScroll = function enableBodyScroll() {
+  var body = document.body;
+  var scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  body.style.overflow = "auto";
+  body.style.overflowX = "hidden"; // body.style.height = `auto`;
+  // document.getElementById('dialog').classList.remove('show');
+};
+
+window.addEventListener('scroll', function () {
+  document.documentElement.style.setProperty('--scroll-y', "".concat(window.scrollY, "px"));
+});
+window.addEventListener('resize', function (event) {
+  headerMoveLinks();
+});
+
+function ready(callbackFunc) {
+  if (document.readyState !== 'loading') {
+    // Document is already ready, call the callback directly
+    callbackFunc();
+  } else if (document.addEventListener) {
+    // All modern browsers to register DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', callbackFunc);
+  } else {
+    // Old IE browsers
+    document.attachEvent('onreadystatechange', function () {
+      if (document.readyState === 'complete') {
+        callbackFunc();
+      }
+    });
+  }
+}
+
+ready(function () {
+  document.querySelectorAll('.owl-item').forEach(function (element) {
+    element.addEventListener('click', function () {
+      header.style.top = "0";
+    });
+  });
+  navToggle.addEventListener('click', function () {
+    headerNav.classList.toggle('header__nav--entered');
+    navToggle.classList.toggle('nav-toggle--entered');
+
+    if (navToggle.contains('nav-toggle--entered') || columnToggle.contains('open')) {
+      disableBodyScroll();
+    } else {
+      enableBodyScroll();
+    }
+  });
+  var rightColumn = document.querySelector('.right-column');
+  columnToggle.addEventListener('click', function () {
+    rightColumn.classList.toggle('open');
+    columnToggle.classList.toggle('open');
+
+    if (navToggle.contains('nav-toggle--entered') || columnToggle.contains('open')) {
+      disableBodyScroll();
+    } else {
+      enableBodyScroll();
+    }
+  });
+  headerOnScroll();
+  headerMoveLinks();
+});
+},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","./scripts/magicLine.js":"scripts/magicLine.js","./scripts/owlCarousels.js":"scripts/owlCarousels.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -22020,7 +22031,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60480" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61472" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

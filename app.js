@@ -1,11 +1,35 @@
 import 'bootstrap';
 import 'owl.carousel';
 import './scripts/magicLine.js';
+import './scripts/owlCarousels.js';
 
 
 const header = document.querySelector('.header');
 const columnToggle = document.querySelector('.column-toggle');
 const navToggle = document.querySelector('.nav-toggle');
+
+const headerNav = document.querySelector('.header__nav');
+const navUpper = document.querySelector('.header__nav-upper');
+const navSocialIcons = document.querySelector('.header__nav-right');
+const headerContainerBottom = document.querySelector('.header .header__container-bottom');
+
+const headerMoveLinks = () => {
+    // if (window.innerWidth >= 1200) {
+    //     headerContainerBottom.append(navSocialIcons);
+    // } else {
+    //     headerNav.append(navSocialIcons);
+    // }
+
+    if (window.innerWidth < 1200) {
+        headerNav.append(navSocialIcons);
+        navSocialIcons.style.display = "flex !Important";
+        // headerContainerBottom.append(navSocialIcons);
+    } else {
+        // headerNav.append(navSocialIcons);
+        headerContainerBottom.append(navSocialIcons);
+    }
+}
+headerMoveLinks();
 
 function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
@@ -52,37 +76,12 @@ window.addEventListener('scroll', () => {
 
 
 
-const headerNav = document.querySelector('.header__nav');
-const headerContainerBottom = document.querySelector('.header .header__container-bottom');
-const navUpper = document.querySelector('.header__nav-upper');
-const navSocialIcons = document.querySelector('.header__nav-right');
 
-
-
-const headerMoveLinks = () => {
-    if (window.innerWidth >= 1200) {
-        headerContainerBottom.append(navSocialIcons);
-    } else {
-        headerNav.append(navSocialIcons);
-    }
-}
 
 window.addEventListener('resize', function (event) {
     headerMoveLinks();
 });
 
-const heroBigContainer = document.querySelector('.hero__big-container');
-
-function centerGoMid(event) {
-    if (innerWidth > 1200) {
-        document.querySelectorAll('.owl-item').forEach(element => {
-            if (element.classList.contains('center')) {
-                let centerCopy = element.innerHTML;
-                heroBigContainer.innerHTML = centerCopy;
-            }
-        });
-    }
-}
 
 function ready(callbackFunc) {
     if (document.readyState !== 'loading') {
@@ -133,70 +132,3 @@ ready(function () {
     headerOnScroll();
     headerMoveLinks();
 });
-
-
-if (typeof (document.querySelector('.hero')) != 'undefined' && document.querySelector('.hero') != null) {
-    $('.hero__carousel').owlCarousel({
-        loop: true,
-        autoplay: true,
-        // autoplay: false,
-        lazyLoad: true,
-        items: 3,
-        margin: 24,
-        stagePadding: 0,
-        center: true,
-        nav: true,
-        onInitialized: centerGoMid,
-        onTranslated: centerGoMid,
-        autoplayHoverPause: true,
-        dots: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 0,
-                dots: true,
-                nav: false
-            },
-            1200: {
-                items: 3,
-                nav: true
-            }
-        }
-    });
-};
-
-
-if (typeof (document.querySelector('.standard-owl')) != 'undefined' && document.querySelector('.standard-owl') != null) {
-    $('.standard-owl').owlCarousel({
-        loop: true,
-        // autoplay: true,
-        autoplay: false,
-        lazyLoad: true,
-        items: 3,
-        margin: 24,
-        stagePadding: 0,
-        autoplayHoverPause: true,
-        dots: false,
-        nav: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 10,
-                stagePadding: 40,
-                dots: true
-            },
-            600: {
-                items: 2,
-                margin: 20
-            },
-            1200: {
-                items: 3
-            },
-            1610: {
-                items: 4
-            }
-        }
-    })
-}
