@@ -2075,7 +2075,7 @@ body {
     background: black;
     z-index: 10;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     -webkit-transition: 400ms;
     transition: 400ms;
     padding-left: 3rem;
