@@ -234,6 +234,7 @@ body {
         padding: 1.5rem 0;
         height: 80px;
         align-items: center;
+        display: inline-flex;
     }
 
     &__social-link {
@@ -1257,7 +1258,7 @@ body {
             }
 
             &-right {
-                display: none !important;
+                display: none;
                 text-align: center;
                 width: 100vw;
                 max-width: 150px;

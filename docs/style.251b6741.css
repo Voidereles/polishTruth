@@ -711,6 +711,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .header__social-link {
@@ -1756,7 +1759,7 @@ body {
     height: auto;
   }
   .header__nav-right {
-    display: none !important;
+    display: none;
     text-align: center;
     width: 100vw;
     max-width: 150px;
