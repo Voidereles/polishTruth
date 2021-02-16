@@ -202,11 +202,11 @@ ready(function () {
 
     setTimeout(function () {
         activeElLine();
-
     }, 100);
 
     const navItems = document.querySelectorAll('.header__nav-li');
-
+    let itemWidth;
+    let itemLeftPos;
     for (const navItem of navItems) {
         navItem.addEventListener('mouseenter', () => {
             itemWidth = parseFloat(getComputedStyle(navItem, null).width.replace("px", ""));
@@ -279,8 +279,6 @@ ready(function () {
             stagePadding: 0,
             center: true,
             nav: true,
-            onInitialized: centerGoMid,
-            onTranslated: centerGoMid,
             autoplayHoverPause: true,
             dots: false,
             responsiveClass: true,
@@ -293,7 +291,9 @@ ready(function () {
                 },
                 1200: {
                     items: 3,
-                    nav: true
+                    nav: true,
+                    onInitialized: centerGoMid,
+                    onTranslated: centerGoMid,
                 }
             }
         });

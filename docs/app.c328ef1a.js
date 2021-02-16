@@ -21881,6 +21881,8 @@ ready(function () {
     activeElLine();
   }, 100);
   var navItems = document.querySelectorAll('.header__nav-li');
+  var itemWidth;
+  var itemLeftPos;
 
   var _iterator = _createForOfIteratorHelper(navItems),
       _step;
@@ -21934,8 +21936,6 @@ ready(function () {
       stagePadding: 0,
       center: true,
       nav: true,
-      onInitialized: centerGoMid,
-      onTranslated: centerGoMid,
       autoplayHoverPause: true,
       dots: false,
       responsiveClass: true,
@@ -21948,7 +21948,9 @@ ready(function () {
         },
         1200: {
           items: 3,
-          nav: true
+          nav: true,
+          onInitialized: centerGoMid,
+          onTranslated: centerGoMid
         }
       }
     });
