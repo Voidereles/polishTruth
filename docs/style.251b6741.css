@@ -1612,7 +1612,7 @@ body {
     padding: 0.5rem 0;
   }
   .header__logo-container {
-    padding-right: 2rem;
+    padding-right: 1.3rem;
   }
   .header.navbar .container-fluid {
     -webkit-box-pack: start;

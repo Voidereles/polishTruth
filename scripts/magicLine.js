@@ -1,4 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
+function ready(callbackFunc) {
+    if (document.readyState !== 'loading') {
+        // Document is already ready, call the callback directly
+        callbackFunc();
+    } else if (document.addEventListener) {
+        // All modern browsers to register DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', callbackFunc);
+    } else {
+        // Old IE browsers
+        document.attachEvent('onreadystatechange', function () {
+            if (document.readyState === 'complete') {
+                callbackFunc();
+            }
+        });
+    }
+}
+
+ready(function () {
     const mainNav = document.getElementById("navList");
     const magicLine = document.createElement('li');
     magicLine.classList.add('magic-line');
