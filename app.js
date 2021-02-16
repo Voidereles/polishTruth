@@ -290,7 +290,7 @@ ready(function () {
                     nav: false
                 },
                 //zmiana
-                1210: {
+                1220: {
                     items: 3,
                     nav: true,
                     onInitialized: centerGoMid,
