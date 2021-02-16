@@ -200,8 +200,10 @@ ready(function () {
         });
     }
 
+    setTimeout(function () {
+        activeElLine();
 
-    activeElLine();
+    }, 100);
 
     const navItems = document.querySelectorAll('.header__nav-li');
 

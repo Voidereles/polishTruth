@@ -21877,7 +21877,9 @@ ready(function () {
     });
   }
 
-  activeElLine();
+  setTimeout(function () {
+    activeElLine();
+  }, 100);
   var navItems = document.querySelectorAll('.header__nav-li');
 
   var _iterator = _createForOfIteratorHelper(navItems),

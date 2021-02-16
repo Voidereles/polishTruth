@@ -193,6 +193,13 @@
   width: 100%; }
 
 @font-face {
+  font-family: 'Anton';
+  font-weight: 400;
+  font-display: swap;
+  src: url("Anton-Regular.c0fbbe8f.ttf");
+}
+
+@font-face {
   font-family: 'Kelson-Sans';
   font-weight: 700;
   font-display: swap;
