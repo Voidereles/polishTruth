@@ -1627,7 +1627,7 @@ body {
             position: fixed;
             content: '';
             background: rgba(0, 0, 0, 0.8);
-            height: 100%;
+            height: 100vh;
             z-index: 9;
             // z-index: 10;
             transition: $durationM;
