@@ -298,8 +298,7 @@ a.hover-underline:hover .standard-owl__heading {
   margin-right: 0.5rem;
   background: #747474;
   position: relative;
-  -webkit-transform: translateY(-6.5px);
-          transform: translateY(-6.5px);
+  top: 11px;
 }
 
 .page-link {
