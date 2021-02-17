@@ -309,9 +309,13 @@ a.hover-underline:hover .standard-owl__heading {
   text-decoration: underline;
 }
 
-.btn,
+.red-btn,
 .btn-warning,
-.btn-danger {
+.btn-danger,
+.btn-success,
+.btn-primary,
+.btn-black,
+.accordion .card-header .btn {
   width: 113px;
   height: 44px;
   display: -webkit-box;
@@ -331,9 +335,13 @@ a.hover-underline:hover .standard-owl__heading {
   transition: 400ms;
 }
 
-.btn::after,
+.red-btn::after,
 .btn-warning::after,
-.btn-danger::after {
+.btn-danger::after,
+.btn-success::after,
+.btn-primary::after,
+.btn-black::after,
+.accordion .card-header .btn::after {
   height: 3px;
   width: 33px;
   background: white;
@@ -343,22 +351,34 @@ a.hover-underline:hover .standard-owl__heading {
   transition: 400ms;
 }
 
-.btn:hover,
+.red-btn:hover,
 .btn-warning:hover,
-.btn-danger:hover {
+.btn-danger:hover,
+.btn-success:hover,
+.btn-primary:hover,
+.btn-black:hover,
+.accordion .card-header .btn:hover {
   color: white;
 }
 
-.btn:hover::after,
+.red-btn:hover::after,
 .btn-warning:hover::after,
-.btn-danger:hover::after {
+.btn-danger:hover::after,
+.btn-success:hover::after,
+.btn-primary:hover::after,
+.btn-black:hover::after,
+.accordion .card-header .btn:hover::after {
   width: 16.5px;
   margin-right: 16.5px;
 }
 
-.btn:focus,
+.red-btn:focus,
 .btn-warning:focus,
-.btn-danger:focus {
+.btn-danger:focus,
+.btn-success:focus,
+.btn-primary:focus,
+.btn-black:focus,
+.accordion .card-header .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -706,14 +726,39 @@ a.hover-underline:hover .standard-owl__heading {
   background: black;
   -webkit-transition: 600ms;
   transition: 600ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-right: 3.5rem;
 }
 
 .faq .accordion .btn:focus {
   text-decoration: none;
 }
 
+.faq .accordion .btn svg {
+  height: 24px;
+  width: auto;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  position: absolute;
+  right: 1rem;
+}
+
+.faq .accordion .btn .plus {
+  opacity: 0;
+}
+
+.faq .accordion .btn .minus {
+  opacity: 1;
+}
+
 .faq .accordion .btn::after {
-  content: '-';
+  content: '';
   width: auto;
   height: auto;
   line-height: 0.6;
@@ -729,9 +774,12 @@ a.hover-underline:hover .standard-owl__heading {
   font-family: 'Kelson-Sans', sans-serif;
 }
 
-.faq .accordion .btn.collapsed::after {
-  content: '+';
-  line-height: 0.7;
+.faq .accordion .btn.collapsed .plus {
+  opacity: 1;
+}
+
+.faq .accordion .btn.collapsed .minus {
+  opacity: 0;
 }
 
 body {

@@ -9,14 +9,34 @@
             width: 100%;
             background: black;
             transition: $durationL;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-right: 3.5rem;
 
             &:focus {
                 text-decoration: none;
             }
+
+            svg {
+                height: 24px;
+                width: auto;
+                transition: $durationM;
+                position: absolute;
+                right: 1rem;
+            }
+
+            .plus {
+                opacity: 0;
+            }
+
+            .minus {
+                opacity: 1;
+            }
         }
 
         .btn::after {
-            content: '-';
+            content: '';
             width: auto;
             height: auto;
             line-height: 0.6;
@@ -32,9 +52,15 @@
             font-family: 'Kelson-Sans', sans-serif;
         }
 
-        .btn.collapsed::after {
-            content: '+';
-            line-height: 0.7;
+        .btn.collapsed {
+            .plus {
+                opacity: 1;
+            }
+
+            .minus {
+                opacity: 0;
+            }
         }
+
     }
 }

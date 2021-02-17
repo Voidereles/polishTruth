@@ -157,9 +157,14 @@
      }
  }
 
- .btn,
+ //  .main .btn:not(.header__search-form .btn),
+ .red-btn,
  .btn-warning,
- .btn-danger {
+ .btn-danger,
+ .btn-success,
+ .btn-primary,
+ .btn-black,
+ .accordion .card-header .btn {
      width: 113px;
      height: 44px;
      display: flex;

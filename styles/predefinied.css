@@ -115,9 +115,13 @@ a.hover-underline:hover .standard-owl__heading {
   text-decoration: underline;
 }
 
-.btn,
+.red-btn,
 .btn-warning,
-.btn-danger {
+.btn-danger,
+.btn-success,
+.btn-primary,
+.btn-black,
+.accordion .card-header .btn {
   width: 113px;
   height: 44px;
   display: -webkit-box;
@@ -137,9 +141,13 @@ a.hover-underline:hover .standard-owl__heading {
   transition: 400ms;
 }
 
-.btn::after,
+.red-btn::after,
 .btn-warning::after,
-.btn-danger::after {
+.btn-danger::after,
+.btn-success::after,
+.btn-primary::after,
+.btn-black::after,
+.accordion .card-header .btn::after {
   height: 3px;
   width: 33px;
   background: white;
@@ -149,22 +157,34 @@ a.hover-underline:hover .standard-owl__heading {
   transition: 400ms;
 }
 
-.btn:hover,
+.red-btn:hover,
 .btn-warning:hover,
-.btn-danger:hover {
+.btn-danger:hover,
+.btn-success:hover,
+.btn-primary:hover,
+.btn-black:hover,
+.accordion .card-header .btn:hover {
   color: white;
 }
 
-.btn:hover::after,
+.red-btn:hover::after,
 .btn-warning:hover::after,
-.btn-danger:hover::after {
+.btn-danger:hover::after,
+.btn-success:hover::after,
+.btn-primary:hover::after,
+.btn-black:hover::after,
+.accordion .card-header .btn:hover::after {
   width: 16.5px;
   margin-right: 16.5px;
 }
 
-.btn:focus,
+.red-btn:focus,
 .btn-warning:focus,
-.btn-danger:focus {
+.btn-danger:focus,
+.btn-success:focus,
+.btn-primary:focus,
+.btn-black:focus,
+.accordion .card-header .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
