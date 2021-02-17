@@ -169,6 +169,10 @@ a.hover-underline:hover .standard-owl__heading {
           box-shadow: none;
 }
 
+.accordion .card-header .btn:hover::after {
+  margin-right: initial;
+}
+
 .btn-primary {
   background: #007bff;
 }

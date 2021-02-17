@@ -198,6 +198,12 @@
 
  }
 
+ .accordion .card-header .btn {
+     &:hover::after {
+         margin-right: initial;
+     }
+ }
+
  .btn-primary {
      background: #007bff;
  }
