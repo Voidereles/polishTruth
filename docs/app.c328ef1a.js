@@ -21883,14 +21883,14 @@ ready(function () {
   activeElLine();
 
   if (document.querySelector('#navList li').classList.contains('active')) {
-    document.querySelector('.hero__carousel').addEventListener('load', function (event) {
+    document.querySelector('.footer').addEventListener('load', function (event) {
       activeElLine();
     });
   }
 
   setTimeout(function () {
     activeElLine();
-  }, 100);
+  }, 400);
   var navItems = document.querySelectorAll('.header__nav-li');
   var itemWidth;
   var itemLeftPos;
@@ -22004,6 +22004,12 @@ ready(function () {
     });
   } //////////
 
+
+  if (typeof document.querySelector('.all-articles__content') != 'undefined' && document.querySelector('.all-articles__content') != null) {
+    if (window.innerWidth < 768) {
+      document.querySelector('.pagination-container').prepend(document.querySelector('.pagination'));
+    }
+  }
 });
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -22033,7 +22039,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53440" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56589" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

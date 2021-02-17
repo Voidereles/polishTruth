@@ -206,14 +206,14 @@ ready(function () {
     activeElLine();
 
     if (document.querySelector('#navList li').classList.contains('active')) {
-        document.querySelector('.hero__carousel').addEventListener('load', (event) => {
+        document.querySelector('.footer').addEventListener('load', (event) => {
             activeElLine();
         });
     }
 
     setTimeout(function () {
         activeElLine();
-    }, 100);
+    }, 400);
 
     const navItems = document.querySelectorAll('.header__nav-li');
     let itemWidth;
@@ -352,6 +352,18 @@ ready(function () {
 
 
 
+
+
+
+
+
+
+
+    if (typeof (document.querySelector('.all-articles__content')) != 'undefined' && document.querySelector('.all-articles__content') != null) {
+        if (window.innerWidth < 768) {
+            document.querySelector('.pagination-container').prepend(document.querySelector('.pagination'));
+        }
+    }
 
 
 });
