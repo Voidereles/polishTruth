@@ -284,6 +284,7 @@ a.hover-underline:hover .standard-owl__heading {
 
 .breadcrumb-item.active {
   text-transform: none;
+  color: #747474;
 }
 
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
@@ -371,6 +372,12 @@ a.hover-underline:hover .standard-owl__heading {
 
 .pagination .page-link:hover {
   color: white;
+}
+
+.pagination-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .pagination-container .page-item.btn {

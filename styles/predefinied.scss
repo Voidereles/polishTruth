@@ -306,6 +306,7 @@
 
          &.active {
              text-transform: none;
+             color: $ptGrey;
          }
 
      }
@@ -318,7 +319,7 @@
          height: 3px;
          width: 13px;
          margin-right: 0.5rem;
-         background: #747474;
+         background: $ptGrey;
          position: relative;
          top: 11px;
      }
@@ -398,6 +399,8 @@
      }
 
      &-container {
+         display: flex;
+
          .page-item.btn {
              width: 133px;
 

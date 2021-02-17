@@ -360,7 +360,7 @@ ready(function () {
 
 
     if (typeof (document.querySelector('.all-articles__content')) != 'undefined' && document.querySelector('.all-articles__content') != null) {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 480) {
             document.querySelector('.pagination-container').prepend(document.querySelector('.pagination'));
         }
     }
