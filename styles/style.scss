@@ -2,6 +2,7 @@
 @import url('owl.carousel/dist/assets/owl.carousel.css');
 
 @import 'predefinied.scss';
+@import 'accordion.scss';
 
 body {
     font-family: 'Kelson-Sans', sans-serif;
@@ -1061,7 +1062,7 @@ body {
 
 .all-articles {
     &__img-container {
-        max-height: 350px;
+        max-height: 360px;
 
         &::before {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
@@ -1438,7 +1439,8 @@ body {
     }
 
     .main {
-        margin-top: 0px;
+        margin-top: -40px;
+        padding-top: 80px;
     }
 
 
@@ -1571,6 +1573,18 @@ body {
 
     }
 
+
+    // .right-column {
+    //     padding-left: 0;
+    // }
+
+    .all-articles {
+
+        &__content {
+            margin-left: 0;
+            padding: 0 30px 0 0;
+        }
+    }
 }
 
 @media (max-width:992px) {
@@ -1593,6 +1607,14 @@ body {
             }
         }
 
+    }
+
+    .main {
+        padding-top: 110px;
+    }
+
+    .breadcrumb {
+        padding-right: 64px !important;
     }
 
     .hero {
@@ -1764,14 +1786,10 @@ body {
 
     .all-articles {
         &__img-container {
-            max-height: 100px;
+            max-height: 120px;
         }
 
 
-        &__content {
-            margin-left: 0;
-            padding: 0 15px 0 0;
-        }
 
         &__time {
             font-size: $fontSizeBodyXS;
@@ -1897,4 +1915,33 @@ body {
         }
 
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bootstrap-switch {
+    border: none;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.iti {
+    width: 100% !important;
 }

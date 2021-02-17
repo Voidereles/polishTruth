@@ -157,7 +157,9 @@
      }
  }
 
- .main .btn {
+ .btn,
+ .btn-warning,
+ .btn-danger {
      width: 113px;
      height: 44px;
      display: flex;
@@ -186,6 +188,7 @@
 
          &::after {
              width: 16.5px;
+             margin-right: 16.5px;
          }
      }
 
@@ -193,6 +196,69 @@
          box-shadow: none;
      }
 
+ }
+
+ .btn-primary {
+     background: #007bff;
+ }
+
+ .btn-success {
+     background: #28a745;
+ }
+
+ .btn-warning {
+     background: #ffc107;
+     color: black;
+
+     &::after {
+         background: black;
+     }
+ }
+
+ .btn-danger {
+     background: $ptRed;
+     border-color: $ptRed;
+ }
+
+ .input-white {
+     height: 44px;
+     display: flex;
+     align-items: center;
+     font-size: $fontSizeBodyXS;
+     padding: 0 1rem;
+     flex-grow: 10;
+     border: none;
+     outline: none;
+     box-shadow: none;
+     line-height: 0.9;
+
+     &:focus {
+         border: none;
+         outline: none;
+         box-shadow: none;
+     }
+ }
+
+
+ .input-dark {
+     height: 44px;
+     display: flex;
+     align-items: center;
+     font-size: $fontSizeBodyXS;
+     padding: 0 1rem;
+     flex-grow: 10;
+     border: none;
+     outline: none;
+     box-shadow: none;
+     line-height: 0.9;
+     background: darken($color: $ptDarkGrey, $amount: 5%);
+     color: white;
+
+     &:focus {
+         border: none;
+         outline: none;
+         box-shadow: none;
+     }
  }
 
  .owl-carousel {
@@ -291,17 +357,23 @@
  .breadcrumb {
      align-items: center;
      margin: 1rem 0;
-     padding: 2rem 0 0.5rem 0;
+     padding: 1.5rem 0 1.5rem 0;
+     border-bottom: 1px solid $ptGrey;
      background: transparent;
      font-family: 'Anton', sans-serif;
      letter-spacing: 0.65px;
      text-transform: uppercase;
+     margin-top: 0;
 
      &-item {
          position: relative;
 
+         a {
+             color: #747474
+         }
+
          a:hover {
-             text-decoration: underline;
+             color: white;
          }
 
          &.active {

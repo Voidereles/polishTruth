@@ -1,0 +1,23 @@
+.faq .accordion .card {
+  background-color: black;
+}
+
+.faq .accordion .btn {
+  width: 100%;
+}
+
+.faq .accordion .btn::after {
+  content: '+';
+  width: auto;
+  height: auto;
+  line-height: 0.6;
+  top: -4px;
+  font-size: 60px;
+  margin-left: 0.5rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background: transparent;
+  position: absolute;
+  right: 0.5rem;
+}
+/*# sourceMappingURL=accordion.css.map */
