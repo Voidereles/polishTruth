@@ -2263,7 +2263,7 @@ body {
     -webkit-transform: translateY(calc(-50% - 85px));
             transform: translateY(calc(-50% - 85px));
   }
-  .pagination-container .page-item.btn {
+  .pagination-container .btn.page-item {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
