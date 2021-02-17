@@ -501,15 +501,15 @@ a.hover-underline:hover .standard-owl__heading {
   display: flex;
 }
 
-.pagination-container .page-item.btn {
+.pagination-container .page-item.red-btn {
   width: 133px;
 }
 
-.pagination-container .page-item.btn.disabled {
+.pagination-container .page-item.red-btn.disabled {
   background: #747474;
 }
 
-.pagination-container .page-item.btn.previous {
+.pagination-container .page-item.red-btn.previous {
   background: #747474;
 }
 
@@ -2464,7 +2464,7 @@ body {
   .pagination-container {
     display: block;
   }
-  .pagination-container .btn.page-item {
+  .pagination-container .red-btn.page-item {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
