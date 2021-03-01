@@ -2063,6 +2063,11 @@ body {
     border: 5px solid black;
 }
 
+.btn-primary.sortable li:focus,
+.btn-primary.sortable li:hover {
+    background: #007bff;
+}
+
 @media (min-width:1200px) {
 
     .left-column.backend {
