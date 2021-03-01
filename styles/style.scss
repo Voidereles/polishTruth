@@ -1985,15 +1985,6 @@ body {
     max-width: 2000px;
 }
 
-.left-column.backend {
-    max-width: calc(100% - 400px);
-    flex: 1;
-}
-
-.right-column.backend {
-    max-width: 400px;
-    flex: initial;
-}
 
 .grid-view {
     .card {
@@ -2070,4 +2061,17 @@ body {
     color: white;
     border-radius: 0;
     border: 5px solid black;
+}
+
+@media (min-width:1200px) {
+
+    .left-column.backend {
+        max-width: calc(100% - 400px);
+        flex: 1;
+    }
+
+    .right-column.backend {
+        max-width: 400px;
+        flex: initial;
+    }
 }

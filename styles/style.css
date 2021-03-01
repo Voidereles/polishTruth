@@ -2525,20 +2525,6 @@ body {
   max-width: 2000px;
 }
 
-.left-column.backend {
-  max-width: calc(100% - 400px);
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.right-column.backend {
-  max-width: 400px;
-  -webkit-box-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
-}
-
 .grid-view .card {
   border-radius: 0;
   border: none;
@@ -2615,5 +2601,20 @@ body {
   color: white;
   border-radius: 0;
   border: 5px solid black;
+}
+
+@media (min-width: 1200px) {
+  .left-column.backend {
+    max-width: calc(100% - 400px);
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .right-column.backend {
+    max-width: 400px;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+  }
 }
 /*# sourceMappingURL=style.css.map */
