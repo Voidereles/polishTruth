@@ -2717,16 +2717,19 @@ body {
   max-width: 2000px;
 }
 
-.grid-view .card {
+.grid-view .card,
+.detail-view .card {
   border-radius: 0;
   border: none;
 }
 
-.grid-view .table-dark {
+.grid-view .table-dark,
+.detail-view .table-dark {
   background-color: rgba(0, 0, 0, 0.88);
 }
 
-.grid-view .table-dark .form-control {
+.grid-view .table-dark .form-control,
+.detail-view .table-dark .form-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2747,20 +2750,39 @@ body {
   color: white;
 }
 
-.grid-view .table-dark .form-control:focus {
+.grid-view .table-dark .form-control:focus,
+.detail-view .table-dark .form-control:focus {
   border: none;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.grid-view .card-footer {
+.grid-view .table-dark .kv-date-picker,
+.detail-view .table-dark .kv-date-picker {
+  background: black !important;
+  border-radius: 0 !important;
+}
+
+.grid-view .table-dark .kv-date-picker .kv-dp-icon,
+.detail-view .table-dark .kv-date-picker .kv-dp-icon {
+  color: white !important;
+}
+
+.grid-view .table-dark .kv-date-remove,
+.detail-view .table-dark .kv-date-remove {
+  background: white !important;
+}
+
+.grid-view .card-footer,
+.detail-view .card-footer {
   border-radius: 0;
   border: none;
   background: #1a1a1a;
 }
 
-.grid-view .select2-container--krajee-bs4 .select2-selection {
+.grid-view .select2-container--krajee-bs4 .select2-selection,
+.detail-view .select2-container--krajee-bs4 .select2-selection {
   border-radius: 0;
   color: white;
   background: black;
@@ -2768,7 +2790,9 @@ body {
 }
 
 .grid-view .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
-.grid-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
+.grid-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus,
+.detail-view .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
+.detail-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
   border-color: black;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -2778,8 +2802,8 @@ body {
   background: black;
   border: 1px solid black !important;
   border-radius: 0;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  -webkit-box-shadow: -1px 0rem 3rem 1rem rgba(103, 103, 103, 0.3) !important;
+          box-shadow: -1px 0rem 3rem 1rem rgba(103, 103, 103, 0.3) !important;
 }
 
 .select2-container--krajee-bs4 .select2-search--dropdown .select2-search__field {
@@ -2791,6 +2815,11 @@ body {
 .select2-container--krajee-bs4 .select2-results__option[aria-selected=true] {
   background: #e20a0a;
   color: white;
+  border-radius: 0;
+  border: 5px solid black;
+}
+
+.select2-container--krajee-bs4 .select2-results__option[aria-selected] {
   border-radius: 0;
   border: 5px solid black;
 }
