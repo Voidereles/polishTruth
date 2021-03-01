@@ -2679,5 +2679,136 @@ body {
   width: 100% !important;
 }
 
+.after-none::after {
+  content: none !important;
+}
+
+.kv-detail-heading {
+  background-color: black !important;
+}
+
+.kv-crumb-active,
+.kv-detail-crumbs {
+  color: white !important;
+  font-weight: normal !important;
+}
+
+.kv-detail-heading .btn-outline-secondary {
+  display: none !important;
+}
+
+.kv-remove {
+  background-color: #e20a0a !important;
+  border-color: #e20a0a !important;
+}
+
+.bootstrap-dialog-message {
+  color: #000000 !important;
+}
+
+.kv-hidden {
+  display: none !important;
+}
+
+.popover-x {
+  display: none;
+}
+
+.container-fluid.backend {
+  max-width: 2000px;
+}
+
+.left-column.backend {
+  max-width: calc(100% - 400px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.right-column.backend {
+  max-width: 400px;
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+}
+
+.grid-view .card {
+  border-radius: 0;
+  border: none;
+}
+
+.grid-view .table-dark {
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.grid-view .table-dark .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 0.9;
+  background: #0d0d0d;
+  color: white;
+}
+
+.grid-view .table-dark .form-control:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.grid-view .card-footer {
+  border-radius: 0;
+  border: none;
+  background: #1a1a1a;
+}
+
+.grid-view .select2-container--krajee-bs4 .select2-selection {
+  border-radius: 0;
+  color: white;
+  background: black;
+  border: 1px solid black;
+}
+
+.grid-view .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
+.grid-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
+  border-color: black;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.select2-dropdown {
+  background: black;
+  border: 1px solid black !important;
+  border-radius: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.select2-container--krajee-bs4 .select2-search--dropdown .select2-search__field {
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+.select2-container--krajee-bs4 .select2-results__option.select2-results__option--selected,
+.select2-container--krajee-bs4 .select2-results__option[aria-selected=true] {
+  background: #e20a0a;
+  color: white;
+  border-radius: 0;
+  border: 5px solid black;
+}
+
 
 /*# sourceMappingURL=style.251b6741.css.map */

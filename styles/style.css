@@ -2549,6 +2549,34 @@ body {
   background-color: rgba(0, 0, 0, 0.88);
 }
 
+.grid-view .table-dark .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 0.9;
+  background: #0d0d0d;
+  color: white;
+}
+
+.grid-view .table-dark .form-control:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .grid-view .card-footer {
   border-radius: 0;
   border: none;

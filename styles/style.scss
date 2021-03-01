@@ -2003,6 +2003,26 @@ body {
 
     .table-dark {
         background-color: $black88;
+
+        .form-control {
+            display: flex;
+            align-items: center;
+            font-size: $fontSizeBodyXS;
+            padding: 0 1rem;
+            flex-grow: 10;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            line-height: 0.9;
+            background: darken($color: $ptDarkGrey, $amount: 5%);
+            color: white;
+
+            &:focus {
+                border: none;
+                outline: none;
+                box-shadow: none;
+            }
+        }
     }
 
     .card-footer {
