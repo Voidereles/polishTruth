@@ -1945,3 +1945,109 @@ body {
 .iti {
     width: 100% !important;
 }
+
+.after-none::after {
+    content: none !important;
+}
+
+.kv-detail-heading {
+    background-color: black !important;
+}
+
+.kv-crumb-active,
+.kv-detail-crumbs {
+    color: white !important;
+    font-weight: normal !important;
+}
+
+.kv-detail-heading .btn-outline-secondary {
+    display: none !important;
+}
+
+.kv-remove {
+    background-color: #e20a0a !important;
+    border-color: #e20a0a !important;
+}
+
+.bootstrap-dialog-message {
+    color: #000000 !important;
+}
+
+.kv-hidden {
+    display: none !important;
+}
+
+.popover-x {
+    display: none;
+}
+
+.container-fluid.backend {
+    max-width: 2000px;
+}
+
+.left-column.backend {
+    max-width: calc(100% - 400px);
+    flex: 1;
+}
+
+.right-column.backend {
+    max-width: 400px;
+    flex: initial;
+}
+
+.grid-view {
+    .card {
+        border-radius: 0;
+        border: none;
+    }
+
+    .table-dark {
+        background-color: $black88;
+    }
+
+    .card-footer {
+        border-radius: 0;
+        border: none;
+        background: $ptDarkGrey;
+
+    }
+
+    .select2-container--krajee-bs4 .select2-selection {
+        border-radius: 0;
+        color: white;
+        background: black;
+        border: 1px solid black;
+    }
+
+    .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
+    .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
+        border-color: black;
+        box-shadow: none !important;
+    }
+
+    //do inputów dodać .input-dark
+    //dodać klasę backend do tych 3 rzeczy
+
+}
+
+
+.select2-dropdown {
+    background: black;
+    border: 1px solid black !important;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.select2-container--krajee-bs4 .select2-search--dropdown .select2-search__field {
+
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+.select2-container--krajee-bs4 .select2-results__option.select2-results__option--selected,
+.select2-container--krajee-bs4 .select2-results__option[aria-selected=true] {
+    background: #e20a0a;
+    color: white;
+    border-radius: 0;
+    border: 5px solid black;
+}
