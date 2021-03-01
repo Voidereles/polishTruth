@@ -111,12 +111,16 @@ ready(function () {
 
     const navLeft = document.querySelector('.header__nav-left');
     if (window.innerWidth < 768) {
-        document.querySelector('.header__search-input').addEventListener('focus', function () {
-            navLeft.style.display = 'none';
-        });
-        document.querySelector('.header__search-input').addEventListener('focusout', function () {
-            navLeft.style.display = 'block';
-        });
+
+        if (typeof (document.querySelector('.header__search-input')) != 'undefined' && document.querySelector('.header__search-input') != null) {
+            document.querySelector('.header__search-input').addEventListener('focus', function () {
+                navLeft.style.display = 'none';
+            });
+            document.querySelector('.header__search-input').addEventListener('focusout', function () {
+                navLeft.style.display = 'block';
+            });
+        }
+
 
     }
 
