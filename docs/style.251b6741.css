@@ -2748,6 +2748,7 @@ body {
   line-height: 0.9;
   background: #0d0d0d;
   color: white;
+  min-height: 38px;
 }
 
 .grid-view .table-dark .form-control:focus,
@@ -2760,7 +2761,7 @@ body {
 
 .grid-view .table-dark .kv-date-picker,
 .detail-view .table-dark .kv-date-picker {
-  background: black !important;
+  background: #1a1a1a !important;
   border-radius: 0 !important;
 }
 
@@ -2785,8 +2786,8 @@ body {
 .detail-view .select2-container--krajee-bs4 .select2-selection {
   border-radius: 0;
   color: white;
-  background: black;
-  border: 1px solid black;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
   padding-right: 53px;
 }
 
@@ -2801,14 +2802,14 @@ body {
 .grid-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus,
 .detail-view .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
 .detail-view .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
-  border-color: black;
+  border-color: #1a1a1a;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
 
 .select2-dropdown {
-  background: black;
-  border: 1px solid black !important;
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a !important;
   border-radius: 0;
   -webkit-box-shadow: -1px 0rem 3rem 1rem rgba(103, 103, 103, 0.3) !important;
           box-shadow: -1px 0rem 3rem 1rem rgba(103, 103, 103, 0.3) !important;
@@ -2824,12 +2825,12 @@ body {
   background: #e20a0a;
   color: white;
   border-radius: 0;
-  border: 5px solid black;
+  border: 5px solid #1a1a1a;
 }
 
 .select2-container--krajee-bs4 .select2-results__option[aria-selected] {
   border-radius: 0;
-  border: 5px solid black;
+  border: 5px solid #1a1a1a;
 }
 
 .btn-primary.sortable li:focus,
@@ -2959,6 +2960,11 @@ body {
   border-radius: 0;
   color: white;
   border-color: grey;
+}
+
+.kv-detail-container .file-caption,
+.article-form .file-caption {
+  min-height: 45px;
 }
 
 .kv-detail-container .kv-detail-heading,
