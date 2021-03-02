@@ -2042,6 +2042,13 @@ body {
         color: white;
         background: black;
         border: 1px solid black;
+        padding-right: 53px;
+    }
+
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__clear {
+        background: white;
+        opacity: 1;
+        margin-top: 2px;
     }
 
     .select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection,
@@ -2085,6 +2092,139 @@ body {
 .btn-primary.sortable li:focus,
 .btn-primary.sortable li:hover {
     background: #007bff;
+}
+
+.modal.type-warning {
+    .bootstrap-dialog-title {
+        color: $ptDarkGrey;
+    }
+
+    .bootstrap-dialog-footer-buttons {
+        display: flex;
+
+        .btn-outline-secondary {
+            width: 113px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            background: $ptRed;
+            color: white;
+            border-radius: 0;
+            position: relative;
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.45px;
+            transition: $durationM;
+            border-color: $ptRed;
+
+            &::after {
+                height: 3px;
+                width: 33px;
+                background: white;
+                content: '';
+                margin-left: 0.5rem;
+                transition: $durationM;
+            }
+
+            &:hover {
+                color: white;
+                background: $ptRed;
+
+
+                &::after {
+                    width: 16.5px;
+                    margin-right: 16.5px;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .btn {
+            .fas {
+                display: none;
+            }
+        }
+    }
+}
+
+.datepicker.datepicker-dropdown {
+    transform: translateY(40%);
+}
+
+.kv-tree-wrapper {
+    background: $ptDarkGrey;
+    border: none;
+    color: white;
+
+    .kv-tree-container {
+        border: none;
+    }
+
+    .kv-node-detail:focus,
+    .kv-focussed {
+        background: $ptGrey;
+
+        .kv-node-toggle {
+            color: white !important;
+        }
+
+    }
+
+    .kv-node-detail:hover {
+        background-color: lighten($color: $ptDarkGrey, $amount: 5%);
+    }
+
+    .kv-tree-list,
+    .kv-node-indicators {
+        background: transparent;
+    }
+
+    .kv-tree li.kv-parent {
+        border: none;
+    }
+
+    .kv-tree-root {
+        background: transparent;
+
+        &.text-primary {
+            color: white !important;
+        }
+    }
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    border-radius: 0;
+}
+
+.kv-detail-container,
+.article-form {
+    border: none;
+
+    .form-control {
+        background: $ptDarkGrey;
+        border-radius: 0;
+        color: white;
+        border-color: grey;
+    }
+
+    .kv-detail-heading {
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .select2-container--krajee-bs4 .select2-selection {
+        background: $ptDarkGrey;
+        border-radius: 0;
+        color: white;
+    }
+
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__rendered {
+        color: white;
+    }
 }
 
 @media (min-width:1200px) {

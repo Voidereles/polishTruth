@@ -9,14 +9,14 @@
   font-family: 'Kelson-Sans';
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Kelson Sans Bold.otf");
+  src: url("../fonts/kelson-sans-ru-bold.ttf") format("truetype"), url("../fonts/Kelson Sans Bold RU.otf") format("opentype");
 }
 
 @font-face {
   font-family: 'Kelson-Sans';
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Kelson Sans Regular.otf");
+  src: url("../fonts/kelson-sans-ru-normal.ttf") format("truetype"), url("../fonts/Kelson Sans Regular RU.otf") format("opentype");
 }
 
 .font-grey {
@@ -381,7 +381,7 @@ a.hover-underline:hover .standard-owl__heading {
           align-items: center;
   margin: 1rem 0;
   padding: 1.5rem 0 1.5rem 0;
-  border-bottom: 1px solid #747474;
+  border-bottom: 1px solid #454545;
   background: transparent;
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.65px;
